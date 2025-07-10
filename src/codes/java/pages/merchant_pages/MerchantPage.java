@@ -2,10 +2,6 @@ package codes.java.pages.merchant_pages;
 
 import codes.java.entities.users.Merchant;
 import codes.java.entities.users.User;
-import codes.java.pages.merchant_pages.dishes_manager.DishesManager;
-import codes.java.pages.merchant_pages.merchant_info.MerchantInfo;
-import codes.java.pages.merchant_pages.orders_manager.OrdersManager;
-import codes.java.pages.merchant_pages.sales_analyzer.SalesAnalyzer;
 import codes.java.utils.Input;
 
 public class MerchantPage {

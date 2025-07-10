@@ -1,4 +1,4 @@
-package codes.java.pages.merchant_pages.dishes_manager;
+package codes.java.pages.merchant_pages;
 
 import codes.java.entities.Dish;
 import codes.java.entities.users.Merchant;

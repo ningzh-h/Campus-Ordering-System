@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/CampusOrderingSystem.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/dishes_manager/DishesManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/merchant_info/MerchantInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/orders_manager/OrdersManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/sales_analyzer/SalesAnalyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/codes/python/data_analyzer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/codes/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/MerchantPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/MerchantPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/student_pages/StudentPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/student_pages/StudentPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/student_pages/my_orders/MyOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/student_pages/my_orders/MyOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/student_pages/new_order/NewOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/student_pages/new_order/NewOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/student_pages/student_hot_dishes/StudentHotDishes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/student_pages/student_hot_dishes/StudentHotDishes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/student_pages/student_info/StudentInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/student_pages/student_info/StudentInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/services/MerchantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/services/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/dishes_manager/DishesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/DishesManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/merchant_info/MerchantInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/MerchantInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/orders_manager/OrdersManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/OrdersManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/sales_analyzer/SalesAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/SalesAnalyzer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

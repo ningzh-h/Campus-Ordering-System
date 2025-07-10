@@ -1,4 +1,4 @@
-package codes.java.pages.merchant_pages.merchant_info;
+package codes.java.pages.merchant_pages;
 
 import codes.java.entities.users.User;
 

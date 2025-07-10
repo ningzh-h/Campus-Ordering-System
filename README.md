@@ -30,9 +30,11 @@ src/
 │  │  │  │  ├─ student_hot_dishes # 热销菜品排行
 │  │  │  │  └─ student_info       # 待定
 │  │  │  └─ merchant_pages
-│  │  │     ├─ 
-│  │  │     ├─
-│  │  │     └─
+│  │  │     ├─ MerchantPage.java  # 商家管理系统
+│  │  │     ├─ DishesManager.java # 菜品管理
+│  │  │     ├─ OrdersManager.java # 订单处理
+│  │  │     ├─ SalesAnalyzer.java # 销售分析
+│  │  │     └─ MerchantInfo.java  # 待定
 │  │  │
 │  │  ├─ services/
 │  │  │  ├─ LogInService.java # 登录注册
@@ -46,14 +48,14 @@ src/
 │  │     └─ CSVReader         # 读 CSV
 │  │  
 │  └─ python/
-│     ├─ 
-│     ├─
+│     ├─ requirement.txt
+│     ├─ data_analyzer.py
 │     └─
 │  
 ├─ data/
 │  ├─ input/  # 系统内部数据
 │  └─ output/ # 数据分析输出数据
-└─ README # 简述文件
+└─ README # 自述文件
 
 ```
 

@@ -1,4 +1,4 @@
-package codes.java.pages.merchant_pages.orders_manager;
+package codes.java.pages.merchant_pages;
 
 import codes.java.entities.Order;
 import codes.java.entities.users.Merchant;
