@@ -1,5 +1,6 @@
 package codes.java.pages.student_pages;
 
+import codes.java.entities.users.Student;
 import codes.java.entities.users.User;
 import codes.java.pages.student_pages.my_orders.MyOrders;
 import codes.java.pages.student_pages.new_order.NewOrder;
@@ -10,7 +11,7 @@ import codes.java.utils.Input;
 
 public class StudentPage {
     Input input = new Input();
-    User currentUser = null;
+    Student currentUser = null;
     NewOrder newOrder = new NewOrder();
     MyOrders myOrders = new MyOrders();
     StudentHotDishes hotDishes = new StudentHotDishes();
@@ -18,7 +19,7 @@ public class StudentPage {
 
     // 学生页面
     public User showStudentMenu(User currentUser) {
-        this.currentUser = currentUser;
+        this.currentUser = (Student) currentUser;
 
         System.out.println("\n=== 学生订餐系统 ===");
         System.out.println("1. 新建订单");
@@ -40,12 +41,12 @@ public class StudentPage {
                 myOrders.myOrders(this.currentUser);
                 break;
            case 3:
-                hotDishes.hotDishes(currentUser);
+                hotDishes.hotDishes(this.currentUser);
                 break;
            case 4:
                 // TODO: 个人信息待实现
 //                currentUser.editInfo();
-                studentInfo.student_info(currentUser);
+                studentInfo.studentInfo(this.currentUser);
                 break;
             default:
                 System.out.println("无效选择，请重新输入！");

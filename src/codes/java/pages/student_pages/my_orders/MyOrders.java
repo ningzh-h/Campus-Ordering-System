@@ -1,8 +1,8 @@
 package codes.java.pages.student_pages.my_orders;
 
 import codes.java.entities.Order;
-import codes.java.entities.users.User;
-import codes.java.services.StudentService;
+import codes.java.entities.users.Student;
+import codes.java.services.UserService;
 import codes.java.utils.Input;
 import java.util.List;
 import java.util.Scanner;
@@ -10,15 +10,15 @@ import java.util.Scanner;
 public class MyOrders {
     Input input = new Input();
     Scanner scanner = new Scanner(System.in);
-    StudentService studentService = new StudentService();
+    UserService userService = new UserService();
     List<Order> studentOrders;
     Order orderChosen;
 
-    public void myOrders(User currentUser) {
+    public void myOrders(Student currentUser) {
         while (true) {
             System.out.println("\n=== 我的订单 ===");
-            // TODO: StudentService 获取学生的历史订单
-//        studentOrders = studentService.getOrdersByUserID(currentUser.userID);
+            // TODO: UserService 获取学生的历史订单
+//        studentOrders = userService.getOrdersByUserID(currentUser.userID);
             try {
 
                 int len = studentOrders.size();

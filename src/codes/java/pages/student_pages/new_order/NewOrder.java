@@ -3,7 +3,7 @@ package codes.java.pages.student_pages.new_order;
 import codes.java.entities.Dish;
 import codes.java.entities.Order;
 import codes.java.entities.users.Merchant;
-import codes.java.entities.users.User;
+import codes.java.entities.users.Student;
 import codes.java.utils.Input;
 
 public class NewOrder {
@@ -16,7 +16,7 @@ public class NewOrder {
     Dish dish;
     int quantity = 0;
 
-    public void newOrder(User currentUser) {
+    public void newOrder(Student currentUser) {
         canteen = canteenChoose.chooseCanteen();
         if (!canteen.equals("R")) {
             while (true) {

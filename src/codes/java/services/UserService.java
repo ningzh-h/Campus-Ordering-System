@@ -1,4 +1,4 @@
 package codes.java.services;
 
-public class MerchantService {
+public class UserService {
 }
