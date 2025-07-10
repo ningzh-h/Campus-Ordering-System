@@ -1,0 +1,52 @@
+package codes.java.pages.student_pages;
+
+import codes.java.entities.users.User;
+import codes.java.pages.student_pages.my_orders.MyOrders;
+import codes.java.pages.student_pages.new_order.NewOrder;
+import codes.java.pages.student_pages.student_hot_dishes.StudentHotDishes;
+import codes.java.utils.Input;
+
+
+public class StudentPage {
+    Input input = new Input();
+    User currentUser = null;
+    NewOrder newOrder = new NewOrder();
+    MyOrders myOrders = new MyOrders();
+    StudentHotDishes hotDishes = new StudentHotDishes();
+
+    // 学生页面
+    public User showStudentMenu(User currentUser) {
+        this.currentUser = currentUser;
+
+        System.out.println("\n=== 学生订餐系统 ===");
+        System.out.println("1. 新建订单");
+        System.out.println("2. 我的订单");
+        System.out.println("3. 热销菜品");
+        System.out.println("4. 个人信息");
+        System.out.println("0. 退出登录");
+
+        int choice = input.getInt("请选择：");
+        switch (choice) {
+            case 0:
+                this.currentUser = null;
+                System.out.println("已退出登录，欢迎下次使用。");
+                break;
+            case 1:
+                newOrder.newOrder(this.currentUser);
+                break;
+            case 2:
+                myOrders.myOrders(this.currentUser);
+                break;
+//            case 3:
+//                hotDishes();
+//                break;
+//            case 4:
+                // TODO: 个人信息待实现
+//                currentUser.editInfo();
+//                break;
+            default:
+                System.out.println("无效选择，请重新输入！");
+        }
+        return this.currentUser;
+    }
+}

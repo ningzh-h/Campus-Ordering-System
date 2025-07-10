@@ -1,0 +1,50 @@
+package codes.java.pages.student_pages.new_order;
+
+import codes.java.entities.Dish;
+import codes.java.entities.Order;
+import codes.java.entities.users.Merchant;
+import codes.java.entities.users.User;
+import codes.java.utils.Input;
+
+public class NewOrder {
+    Input input = new Input();
+    CanteenChoose canteenChoose = new CanteenChoose();
+    String canteen;
+    MerchantChoose merchantChoose = new MerchantChoose();
+    Merchant merchant;
+    DishChoose dishChoose = new DishChoose();
+    Dish dish;
+    int quantity = 0;
+
+    public void newOrder(User currentUser) {
+        canteen = canteenChoose.chooseCanteen();
+        if (!canteen.equals("R")) {
+            while (true) {
+                merchant = merchantChoose.chooseMerchant(canteen);
+                if(merchant != null) {
+                    dish = dishChoose.chooseDish(merchant);
+                    if (dish != null) {
+                        System.out.println("您的选择是："
+                                + merchant.getAddress()
+                                + merchant.getMerchantName() + "的"
+                                + dish.getDishName()
+                        );
+                        quantity = input.getInt("请输入订餐数量：");
+
+                        System.out.println("正在为您生成订单...");
+                        // TODO: 创建新的Order
+//                        Order order = new Order();
+                        System.out.println("已为您生成订单！");
+
+                        System.out.println("订单信息：");
+                        // TODO: Order 的 toTable 方法
+//                        order.toTable();
+                        return;
+                    }
+                } else {
+                    break;
+                }
+            }
+        }
+    }
+}
