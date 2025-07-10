@@ -18,20 +18,19 @@ public class Main {
         // 流程控制
         while (true) {
             if (currentUser == null) {
-//                currentUser = loginPage.showLoginPage();
-//            } else {
-//                if (currentUser.getRole() == 0) {
+               currentUser = loginPage.showLoginPage();
+           } else {
+               if (currentUser.getRole() == 0) {
                     currentUser = studentPage.showStudentMenu(currentUser);
 //                    } else if (currentUser.getRole() == 1) {
                     // TODO: 商家登录
-//                         currentUser = merchantPage.showMerchantMenu();
+                        // currentUser = merchantPage.showMerchantMenu();
                 } else {
                     System.out.println("账号登录异常，请重新登录。");
                     currentUser = null;
-//                }
-            }
+               }
+            // }
         }
     }
-
 
 }

@@ -6,43 +6,53 @@
 ## 项目结构
 
 ```commandline
-CampusOrderingSystem/
-<<<<<<< HEAD
-├─ java/
-=======
-├─ src/
->>>>>>> 55143e1d9f144ce2cf65e15f8ba2db90531fc528
+src/
+├─ code/
 │  ├─ java/
 │  │  ├─ Main.java        # 程序入口, 流程控制
-│  │  ├─ models/
-│  │  │  ├─ User.java     # 用户类 (父类)
-│  │  │  ├─ Student.java  # 学生类
-│  │  │  ├─ Merchant.java # 店家类
+│  │  ├─ entities/        # 实体类
+│  │  │  ├─ users/
+│  │  │  │  ├─ User.java     # 用户类 (父类)
+│  │  │  │  ├─ Merchant.java # 商家类
+│  │  │  │  └─ Student.java  # 学生类
 │  │  │  ├─ Dish.java     # 菜品类
 │  │  │  └─ Order.java    # 订单类
 │  │  │
+│  │  ├─ pages/
+│  │  │  ├─ login_pages
+│  │  │  │  ├─ LoginPage.java # 登录页面
+│  │  │  │  ├─ Login.java     # 用户登录
+│  │  │  │  └─ Register.java  # 用户注册
+│  │  │  ├─ student_pages
+│  │  │  │  ├─ StudentPage.java   # 学生订餐系统
+│  │  │  │  ├─ new_order          # 新建订单
+│  │  │  │  ├─ my_orders          # 我的订单
+│  │  │  │  ├─ student_hot_dishes # 热销菜品排行
+│  │  │  │  └─ student_info       # 待定
+│  │  │  └─ merchant_pages
+│  │  │     ├─ 
+│  │  │     ├─
+│  │  │     └─
+│  │  │
 │  │  ├─ services/
 │  │  │  ├─ LogInService.java # 登录注册
-│  │  │  ├─ MenuService.java  # 菜品信息
+│  │  │  ├─ StudentService.java  # 菜品信息
+│  │  │  ├─ MerchantService.java  # 菜品信息
 │  │  │  └─ OrderService.java # 订单相关
 │  │  │
 │  │  └─ utils/
-│  │     ├─ CSVGenerate.java  # 菜品信息
-│  │     └─ OrderService.java # 订单相关
+│  │     ├─ Input             # 方便读一个整数或字符串
+│  │     ├─ CSVGenerate.java  # 写 CSV
+│  │     └─ CSVReader         # 读 CSV
 │  │  
-<<<<<<< HEAD
-│  └─ codes.python/
-=======
 │  └─ python/
->>>>>>> 55143e1d9f144ce2cf65e15f8ba2db90531fc528
-│     ├─ requirement.txt  # Python 依赖库
-│     ├─ data_analyzer.py # 数据分析与可视化
-│     └─ notification.py  # 短信通知(学生/店家)与低库存预警(店家)
+│     ├─ 
+│     ├─
+│     └─
 │  
 ├─ data/
-│  ├─ users.csv  # 用户信息 (user_id, user_name, password, role) 
-│  ├─ dishes.csv # 菜品信息 (dish_id, merchant_id, dish_name, dish_price, stock)
-│  └─ orders.csv # 订单记录 (order_id, student_id, dish_id, quantity, total_price, time)
+│  ├─ input/  # 系统内部数据
+│  └─ output/ # 数据分析输出数据
 └─ README # 简述文件
 
 ```

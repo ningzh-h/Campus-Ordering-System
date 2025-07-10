@@ -4,6 +4,7 @@ import codes.java.entities.users.User;
 import codes.java.pages.student_pages.my_orders.MyOrders;
 import codes.java.pages.student_pages.new_order.NewOrder;
 import codes.java.pages.student_pages.student_hot_dishes.StudentHotDishes;
+import codes.java.pages.student_pages.student_info.StudentInfo;
 import codes.java.utils.Input;
 
 
@@ -13,6 +14,7 @@ public class StudentPage {
     NewOrder newOrder = new NewOrder();
     MyOrders myOrders = new MyOrders();
     StudentHotDishes hotDishes = new StudentHotDishes();
+    StudentInfo studentInfo = new StudentInfo();
 
     // 学生页面
     public User showStudentMenu(User currentUser) {
@@ -37,13 +39,14 @@ public class StudentPage {
             case 2:
                 myOrders.myOrders(this.currentUser);
                 break;
-//            case 3:
-//                hotDishes();
-//                break;
-//            case 4:
+           case 3:
+                hotDishes.hotDishes(currentUser);
+                break;
+           case 4:
                 // TODO: 个人信息待实现
 //                currentUser.editInfo();
-//                break;
+                studentInfo.student_info(currentUser);
+                break;
             default:
                 System.out.println("无效选择，请重新输入！");
         }

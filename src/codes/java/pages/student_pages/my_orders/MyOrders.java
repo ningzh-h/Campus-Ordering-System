@@ -4,7 +4,6 @@ import codes.java.entities.Order;
 import codes.java.entities.users.User;
 import codes.java.services.StudentService;
 import codes.java.utils.Input;
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -39,7 +38,7 @@ public class MyOrders {
                     orderChosen = studentOrders.get(choice-1);
                     // TODO: Order 的 toTable() 方法
 //                    orderChosen.toTable();
-                    System.out.println("按任意键返回...");
+                    System.out.println("按回车键返回订餐系统");
                     scanner.nextLine();
                 } else {
                     return;
