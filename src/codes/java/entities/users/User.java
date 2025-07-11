@@ -2,9 +2,7 @@ package codes.java.entities.users;
 
 // 用户类
 public class User {
-    private static int nextId = 1;    // 用于生成下一个用户ID的静态变量
-
-    private final int userId;
+    private int userId;
     private String username;  // 用户名，用于登录系统
     private String password;
     private String phone;
@@ -13,7 +11,6 @@ public class User {
 
     // 构造函数
     public User(String username, String password, String phone, String address) {
-        this.userId = nextId++;
         this.username = username;
         this.password = password;
         this.phone = phone;
@@ -40,7 +37,10 @@ public class User {
         return role;
     }
 
-    // Setters - ID为固定值，不需要修改
+    // Setters
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
     public void setUsername(String username) {
         this.username = username;
     }

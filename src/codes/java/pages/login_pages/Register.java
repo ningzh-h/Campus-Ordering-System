@@ -41,7 +41,6 @@ public class Register {
                 String studentID = input.getString("请输入您的学号：");
                 Student student = new Student(userName_s, password_s, phone_s, address_s, studentID);
 
-                // TODO: 注册逻辑待实现
                 if (loginService.register(student)) {
                     System.out.println("学生注册成功！");
                     currentUser = student;
@@ -66,7 +65,6 @@ public class Register {
                 String shopName = input.getString("请输入您的店铺名称：");
                 Merchant merchant = new Merchant(userName_m, password_m, phone_m, address_m, shopName);
 
-                // TODO: 注册逻辑待实现
                 if (loginService.register(merchant)) {
                     System.out.println("商家注册成功！");
                     currentUser = merchant;
