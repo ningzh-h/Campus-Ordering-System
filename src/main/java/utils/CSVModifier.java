@@ -38,6 +38,8 @@ public class CSVModifier {
 
                 try {
                     int userID = Integer.parseInt(values[0].trim());
+                    int role = Integer.parseInt(values[5].trim());
+                    String userStr;
 
                     if (userID == user.getUserID()) {
                         values[1] = user.getUsername();
@@ -53,7 +55,11 @@ public class CSVModifier {
                         found = true;
                     }
 
-                    bw.write(String.join(",", values));
+                    userStr = String.join(",", values);
+                    if (role == 0) {
+                        userStr += ",,";
+                    }
+                    bw.write(userStr);
                     bw.newLine();
                 } catch (Exception e) {
                     System.err.println("无效行！");

@@ -7,7 +7,7 @@ import main.java.utils.Input;
 public class EditStudentInfo {
     User currentUser;
 
-    public User editInfo(User currentUser, int choice) {
+    public void editInfo(User currentUser, int choice) {
         int editChoice;
         switch (choice) {
             case 0:
@@ -20,7 +20,7 @@ public class EditStudentInfo {
                 editChoice = Input.getInt("请选择：");
                 switch (editChoice) {
                     case 0 -> {}
-                    case 1 -> currentUser.setUsername(Input.getString("请输入新的用户名"));
+                    case 1 -> currentUser.setUsername(Input.getString("请输入新的用户名："));
                     default -> System.out.println("无效选择");
                 }
                 break;
@@ -32,7 +32,7 @@ public class EditStudentInfo {
                 editChoice = Input.getInt("请选择：");
                 switch (editChoice) {
                     case 0 -> {}
-                    case 1 -> currentUser.setUsername(Input.getString("请输入新的电话"));
+                    case 1 -> currentUser.setPhone(Input.getString("请输入新的电话："));
                     default -> System.out.println("无效选择");
                 }
                 break;
@@ -44,7 +44,7 @@ public class EditStudentInfo {
                 editChoice = Input.getInt("请选择：");
                 switch (editChoice) {
                     case 0 -> {}
-                    case 1 -> currentUser.setUsername(Input.getString("请输入新的电话"));
+                    case 1 -> currentUser.setAddress(Input.getString("请输入新的地址："));
                     default -> System.out.println("无效选择");
                 }
                 break;
@@ -70,6 +70,5 @@ public class EditStudentInfo {
         }
         CSVModifier.updateUser(currentUser);
         this.currentUser = currentUser;
-        return this.currentUser;
     }
 }
