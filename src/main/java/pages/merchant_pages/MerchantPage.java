@@ -28,16 +28,21 @@ public class MerchantPage {
                 break;
             case 1:
                 dishesManager.dishesManager(this.currentUser);
+                break;
             case 2:
                 ordersManager.ordersManager(this.currentUser);
+                break;
             case 3:
                 salesAnalyzer.salesAnalyzer(this.currentUser);
+                break;
             case 4:
                 // TODO: 应该在 User 里写一个方法 editInfo() 来实现比较好
 //                currentUser.editInfo();
+                break;
             default:
                 System.out.println("无效选择，请重新输入！");
+                break;
         }
-        return currentUser;
+        return this.currentUser;
     }
 }

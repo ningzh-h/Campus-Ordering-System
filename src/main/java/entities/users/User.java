@@ -2,26 +2,24 @@ package main.java.entities.users;
 
 // 用户类
 public class User {
-    private static int nextID;
-    private String userID;
+    private int userId;
     private String username;  // 用户名，用于登录系统
     private String password;
     private String phone;
     private String address;
     private int role;         // 0代表学生，1代表商家
 
-    public User(String username, String password, String phone, String address, int role) {
+    // 构造函数
+    public User(String username, String password, String phone, String address) {
         this.username = username;
         this.password = password;
         this.phone = phone;
         this.address = address;
-        this.role = role;
     }
 
-
     // Getters
-    public String getUserID() {
-        return userID;
+    public int getUserId() {
+        return userId;
     }
     public String getUsername() {
         return username;
@@ -40,8 +38,8 @@ public class User {
     }
 
     // Setters
-    public void setUserID(String userID) {
-        this.userID = userID;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
     public void setUsername(String username) {
         this.username = username;

@@ -24,7 +24,7 @@ public class NewOrder {
                     if (dish != null) {
                         System.out.println("您的选择是："
                                 + merchant.getAddress()
-                                + merchant.getMerchantName() + "的"
+                                + merchant.getUsername() + "的"
                                 + dish.getDishName()
                         );
                         quantity = Input.getInt("请输入订餐数量：");

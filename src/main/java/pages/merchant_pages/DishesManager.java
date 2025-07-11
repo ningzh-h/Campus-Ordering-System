@@ -23,11 +23,15 @@ public class DishesManager {
             case 0:
                 break;
             case 1:
-                // TODO: new 一个 Dish
-                Dish newDish = null;
-                dishes.add(newDish);
-                // TODO: dishes 来自商家类 Merchant
-//                currentUser.setDishes(dishes);
+                try {
+                    // TODO: new 一个 Dish
+                    Dish newDish = null;
+                    dishes.add(newDish);
+                    // TODO: dishes 来自商家类 Merchant
+                    //                currentUser.setDishes(dishes);
+                } catch (Exception e) {
+                    System.out.println("暂无数据");
+                }
                 break;
 
             case 2:
