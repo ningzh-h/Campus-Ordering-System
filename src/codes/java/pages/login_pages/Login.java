@@ -18,7 +18,6 @@ public class Login {
         System.out.println("请输入密码：");
         String password = scanner.nextLine();
 
-        // TODO: 登录验证逻辑待实现
         currentUser = loginService.authenticate(userName, password);
         if (currentUser != null) {
             System.out.println("登录成功！欢迎您, " + userName);
