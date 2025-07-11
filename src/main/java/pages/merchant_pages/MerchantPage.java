@@ -2,6 +2,7 @@ package main.java.pages.merchant_pages;
 
 import main.java.entities.users.Merchant;
 import main.java.entities.users.User;
+import main.java.pages.merchant_pages.merchant_info.MerchantInfo;
 import main.java.utils.Input;
 
 public class MerchantPage {
@@ -9,6 +10,7 @@ public class MerchantPage {
     DishesManager dishesManager = new DishesManager();
     OrdersManager ordersManager = new OrdersManager();
     SalesAnalyzer salesAnalyzer = new SalesAnalyzer();
+    MerchantInfo merchantInfo = new MerchantInfo();
 
     // 商家页面
     public User showMerchantMenu(User currentUser) {
@@ -36,8 +38,7 @@ public class MerchantPage {
                 salesAnalyzer.salesAnalyzer(this.currentUser);
                 break;
             case 4:
-                // TODO: 应该在 User 里写一个方法 editInfo() 来实现比较好
-//                currentUser.editInfo();
+                merchantInfo.merchantInfo(this.currentUser);
                 break;
             default:
                 System.out.println("无效选择，请重新输入！");

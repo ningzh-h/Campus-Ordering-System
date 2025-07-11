@@ -33,8 +33,10 @@ public class Merchant extends User {
     // Setters
     public void setCanteen(String canteen) {
         this.canteen = canteen;
+        setAddress(canteen + location);
     }
     public void setLocation(String location) {
         this.location = location;
+        setAddress(canteen + location);
     }
 }
