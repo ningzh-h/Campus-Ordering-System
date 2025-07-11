@@ -27,22 +27,20 @@ public class CSVGenerate {
     public static void writeUser(User user) {
         // 使用 true 参数来开启追加模式
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(USERS_CSV_PATH, true))) {
-            StringBuilder sb = new StringBuilder();
-            sb.append(user.getUserId()).append(",");
-            sb.append(user.getUsername()).append(",");
-            sb.append(user.getPassword()).append(",");
-            sb.append(user.getPhone()).append(",");
-            sb.append(user.getAddress()).append(",");
-            sb.append(user.getRole()).append(",");
+            String userStr = user.getUserId() + "," +
+                    user.getUsername() + "," +
+                    user.getPassword() + "," +
+                    user.getPhone() + "," +
+                    user.getAddress() + "," +
+                    user.getRole() + ",";
 
             if (user instanceof Student student) {
-                sb.append(student.getStudentID()).append(",");
-                sb.append("NULL"); // 学生没有 merchantName 字段
+                userStr += student.getStudentID() + ",NULL"; // 学生没有 merchantName 字段
             } else if (user instanceof Merchant merchant) {
-                sb.append("NULL").append(","); // 商家没有 studentId 字段
-                sb.append(merchant.getMerchantName());
+                userStr += "NULL," + merchant.getMerchantName(); // 商家没有 studentId 字段
             }
-            bw.write(sb.toString());
+
+            bw.write(userStr);
             bw.newLine();
         } catch (IOException e) {
             System.err.println("追加写入 users.csv 文件时出错: " + e.getMessage());
@@ -56,7 +54,7 @@ public class CSVGenerate {
     public static void writeOrder(Order order) {
         // 使用 true 参数来开启追加模式
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(ORDERS_CSV_PATH, true))) {
-            String sb = order.getOrderId() + "," +
+            String orderStr = order.getOrderId() + "," +
                     order.getStudent().getUserId() + "," +
                     order.getMerchant().getUserId() + "," +
                     order.getDish().getDishName() + "," +
@@ -66,7 +64,7 @@ public class CSVGenerate {
                     order.getAddress() + "," +
                     order.getPhone() + "," +
                     order.getStatus();
-            bw.write(sb);
+            bw.write(orderStr);
             bw.newLine();
         } catch (IOException e) {
             System.err.println("写入 orders.csv 文件时出错: " + e.getMessage());

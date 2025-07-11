@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/entities/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/student_pages/new_order/NewOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/student_pages/new_order/NewOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/services/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/services/OrderService.java" afterDir="false" />
+    <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="1.CSVReader类: 优化readIDs方法，三个csv文件可复用该方法读取第一列ID&#10;2.实现功能：新建订单&#10;3.Order类新增成员变量String phone">
       <change beforePath="$PROJECT_DIR$/src/codes/java/utils/CSVGenerate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/utils/CSVGenerate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/utils/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/utils/CSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/input/orders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/input/orders.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752208817428</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1.CSVReader类: 优化readIDs方法，三个csv文件可复用该方法读取第一列ID&#10;2.实现功能：新建订单&#10;3.Order类新增成员变量String phone">
+      <option name="closed" value="true" />
+      <created>1752234958451</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752234958451</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +177,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新自述文件，添加了 Python 数据分析" />
     <MESSAGE value="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能" />
+    <MESSAGE value="1.CSVReader类: 优化readIDs方法，三个csv文件可复用该方法读取第一列ID&#10;2.实现功能：新建订单&#10;3.Order类新增成员变量String phone" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.CSVReader类: 优化readIDs方法，三个csv文件可复用该方法读取第一列ID&#10;2.实现功能：新建订单&#10;3.Order类新增成员变量String phone" />
   </component>
 </project>
