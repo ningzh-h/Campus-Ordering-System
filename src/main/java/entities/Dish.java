@@ -7,21 +7,24 @@ public class Dish {
     private double price;
     private int merchantID;          // 菜品所属的商家ID
     private int stock;
+    private int popularity;
 
     // 构造函数
-    public Dish(String dishName, double price, int merchantId, int stock) {
+    public Dish(String dishName, double price, int merchantID, int stock, int popularity) {
         this.dishName = dishName;
         this.price = price;
-        this.merchantID = merchantId;
+        this.merchantID = merchantID;
         this.stock = stock;
+        this.popularity = popularity;
     }
 
-    public Dish(int dishID, String dishName, double price, int merchantId, int stock) {
+    public Dish(int dishID, String dishName, double price, int merchantID, int stock, int popularity) {
         this.dishID = dishID;
         this.dishName = dishName;
         this.price = price;
-        this.merchantID = merchantId;
+        this.merchantID = merchantID;
         this.stock = stock;
+        this.popularity = popularity;
     }
 
     // Getters
@@ -40,6 +43,9 @@ public class Dish {
     public int getStock() {
         return stock;
     }
+    public int getPopularity() {
+        return popularity;
+    }
 
     // Setters
     public void setDishName(String dishName) {
@@ -53,6 +59,13 @@ public class Dish {
     }
     public void setStock(int stock) {
         this.stock = stock;
+    }
+    public void resetPopularity() {
+        popularity = 0;
+    }
+
+    public void updatePopularity() {
+        popularity++;
     }
 
     @Override

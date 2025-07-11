@@ -1,8 +1,7 @@
 package main.java.pages.merchant_pages.merchant_info;
 
 import main.java.entities.users.Merchant;
-import main.java.entities.users.User;
-import main.java.utils.CSVModifier;
+import main.java.utils.CSVUpdater;
 import main.java.utils.Input;
 
 public class EditMerchantInfo {
@@ -71,6 +70,6 @@ public class EditMerchantInfo {
                 System.out.println("无效选择！");
                 break;
         }
-        CSVModifier.updateUser(currentUser);
+        CSVUpdater.update(currentUser);
     }
 }

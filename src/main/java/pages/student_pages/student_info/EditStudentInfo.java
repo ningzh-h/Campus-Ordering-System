@@ -1,8 +1,7 @@
 package main.java.pages.student_pages.student_info;
 
 import main.java.entities.users.Student;
-import main.java.entities.users.User;
-import main.java.utils.CSVModifier;
+import main.java.utils.CSVUpdater;
 import main.java.utils.Input;
 
 public class EditStudentInfo {
@@ -80,6 +79,6 @@ public class EditStudentInfo {
                 System.out.println("无效选择！");
                 break;
         }
-        CSVModifier.updateUser(currentUser);
+        CSVUpdater.update(currentUser);
     }
 }

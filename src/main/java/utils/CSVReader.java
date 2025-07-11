@@ -184,7 +184,7 @@ public class CSVReader {
     }
 
     /**
-     * 根据商家ID从 dishes.csv文件中读取菜品列表。
+     * 根据商家ID从 dishes.csv 文件中读取菜品列表。
      */
     public static List<Dish> readDishesByMerchantID(int merchantID) {
         List<Dish> dishList = new ArrayList<>();
@@ -205,7 +205,8 @@ public class CSVReader {
                         String dishName = values[1].trim();
                         double price = Double.parseDouble(values[2].trim());
                         int stock = Integer.parseInt(values[4].trim());
-                        dishList.add(new Dish(dishID, dishName, price, merchantID, stock));
+                        int popularity = Integer.parseInt(values[5].trim());
+                        dishList.add(new Dish(dishID, dishName, price, merchantID, stock, popularity));
                     }
                 } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
                     System.err.println("解析菜品数据时出错，行内容: " + line);

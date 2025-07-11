@@ -43,7 +43,6 @@ public class StudentPage {
                 popularDishes.popularDishes(this.currentUser);
                 break;
            case 4:
-                // TODO: 个人信息待实现
                 studentInfo.studentInfo(this.currentUser);
                 break;
             default:
