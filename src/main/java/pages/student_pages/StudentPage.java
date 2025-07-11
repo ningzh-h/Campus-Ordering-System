@@ -44,7 +44,6 @@ public class StudentPage {
                 break;
            case 4:
                 // TODO: 个人信息待实现
-//                currentUser.editInfo();
                 studentInfo.studentInfo(this.currentUser);
                 break;
             default:

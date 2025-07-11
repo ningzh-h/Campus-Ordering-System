@@ -1,4 +1,4 @@
-dishID,dishName,price,merchantID,stock
+dish_id,dish_name,price,merchant_id,stock
  1,巨无霸套餐,35.5,2,100
  2,麦辣鸡腿堡,22.0,2,150
  3,香辣鸡腿堡套餐,36.0,13,120

@@ -24,6 +24,6 @@ public class StudentPopularDishes {
             System.out.println("暂无数据");
         }
         
-        Input.getString("按回车键返回订餐系统");
+        Input.jump("按回车键返回订餐系统");
     }
 }

@@ -30,4 +30,9 @@ public class Input {
         }
         return info;
     }
+
+    public static void jump(String intro) {
+        System.out.println(intro);
+        scanner.nextLine();
+    }
 }

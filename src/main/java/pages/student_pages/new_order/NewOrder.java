@@ -4,6 +4,7 @@ import main.java.entities.Dish;
 import main.java.entities.Order;
 import main.java.entities.users.Merchant;
 import main.java.entities.users.Student;
+import main.java.services.OrderService;
 import main.java.utils.Input;
 
 import static java.time.LocalDateTime.now;
@@ -16,6 +17,7 @@ public class NewOrder {
     DishChoose dishChoose = new DishChoose();
     Dish dish;
     int quantity = 0;
+    OrderService orderService = new OrderService();
 
     public void newOrder(Student currentUser) {
         canteen = canteenChoose.chooseCanteen();
@@ -42,6 +44,7 @@ public class NewOrder {
                             dish.getPrice() * quantity,
                             1
                         );
+                        orderService.createOrder(order);
                         System.out.println("已为您生成订单！");
                         System.out.println("订单信息：");
                         System.out.println(order);

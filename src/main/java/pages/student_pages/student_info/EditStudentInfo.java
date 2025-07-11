@@ -1,11 +1,13 @@
 package main.java.pages.student_pages.student_info;
 
 import main.java.entities.users.User;
+import main.java.utils.CSVModifier;
 import main.java.utils.Input;
 
 public class EditStudentInfo {
+    User currentUser;
 
-    public void editInfo(User currentUser, int choice) {
+    public User editInfo(User currentUser, int choice) {
         int editChoice;
         switch (choice) {
             case 0:
@@ -61,10 +63,13 @@ public class EditStudentInfo {
                         System.out.println("两次输入新密码不匹配！");
                     }
                 }
-                return;
+                break;
             default:
                 System.out.println("无效选择！");
                 break;
         }
+        CSVModifier.updateUser(currentUser);
+        this.currentUser = currentUser;
+        return this.currentUser;
     }
 }

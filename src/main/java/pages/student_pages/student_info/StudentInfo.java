@@ -11,9 +11,9 @@ public class StudentInfo {
         System.out.println("1. 用户名：" + currentUser.getUsername());
         System.out.println("2. 用户ID：" + currentUser.getUserID());
         System.out.println("3. 密码设置");
-        System.out.println("4. 电话");
-        System.out.println("5. 地址");
-        System.out.println("6. 学号");
+        System.out.println("4. 电话：" + currentUser.getPhone());
+        System.out.println("5. 地址：" + currentUser.getAddress());
+        System.out.println("6. 学号：" + currentUser.getStudentID());
         System.out.println("0. 返回订餐系统");
         int choice = Input.getInt("请选择");
         
