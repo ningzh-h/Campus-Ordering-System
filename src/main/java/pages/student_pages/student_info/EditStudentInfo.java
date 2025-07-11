@@ -1,50 +1,64 @@
 package main.java.pages.student_pages.student_info;
 
+import main.java.entities.users.Student;
 import main.java.entities.users.User;
 import main.java.utils.CSVModifier;
 import main.java.utils.Input;
 
 public class EditStudentInfo {
-    User currentUser;
+    Student currentUser;
 
     public void editInfo(User currentUser, int choice) {
+        this.currentUser = (Student) currentUser;
         int editChoice;
         switch (choice) {
             case 0:
                 break;
                 
             case 1: 
-                System.out.println("您的用户名为：" + currentUser.getUsername());
+                System.out.println("您的用户名为：" + this.currentUser.getUsername());
                 System.out.println("1. 修改信息");
                 System.out.println("0. 返回个人信息");
                 editChoice = Input.getInt("请选择：");
                 switch (editChoice) {
                     case 0 -> {}
-                    case 1 -> currentUser.setUsername(Input.getString("请输入新的用户名："));
+                    case 1 -> this.currentUser.setUsername(Input.getString("请输入新的用户名："));
                     default -> System.out.println("无效选择");
                 }
                 break;
                 
             case 4:
-                System.out.println("您的电话为：" + currentUser.getPhone());
+                System.out.println("您的电话为：" + this.currentUser.getPhone());
                 System.out.println("1. 修改信息");
                 System.out.println("0. 返回个人信息");
                 editChoice = Input.getInt("请选择：");
                 switch (editChoice) {
                     case 0 -> {}
-                    case 1 -> currentUser.setPhone(Input.getString("请输入新的电话："));
+                    case 1 -> this.currentUser.setPhone(Input.getString("请输入新的电话："));
                     default -> System.out.println("无效选择");
                 }
                 break;
 
             case 5:
-                System.out.println("您的地址为：" + currentUser.getAddress());
+                System.out.println("您的地址为：" + this.currentUser.getAddress());
                 System.out.println("1. 修改信息");
                 System.out.println("0. 返回个人信息");
                 editChoice = Input.getInt("请选择：");
                 switch (editChoice) {
                     case 0 -> {}
-                    case 1 -> currentUser.setAddress(Input.getString("请输入新的地址："));
+                    case 1 -> this.currentUser.setAddress(Input.getString("请输入新的地址："));
+                    default -> System.out.println("无效选择");
+                }
+                break;
+
+            case 6:
+                System.out.println("您的学号为：" + this.currentUser.getStudentID());
+                System.out.println("1. 修改信息");
+                System.out.println("0. 返回个人信息");
+                editChoice = Input.getInt("请选择：");
+                switch (editChoice) {
+                    case 0 -> {}
+                    case 1 -> this.currentUser.setStudentID(Input.getString("请输入新的学号："));
                     default -> System.out.println("无效选择");
                 }
                 break;
@@ -68,7 +82,6 @@ public class EditStudentInfo {
                 System.out.println("无效选择！");
                 break;
         }
-        CSVModifier.updateUser(currentUser);
-        this.currentUser = currentUser;
+        CSVModifier.updateUser(this.currentUser);
     }
 }
