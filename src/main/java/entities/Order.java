@@ -1,22 +1,26 @@
 package main.java.entities;
 
+import main.java.entities.users.Merchant;
+import main.java.entities.users.Student;
+
 import java.time.LocalDateTime;
-import java.util.List;
+
+import static java.time.format.DateTimeFormatter.ofPattern;
 
 // 订单类
 public class Order {
     private int orderID;
-    private int studentID;
-    private int merchantID;
+    private Student student;
+    private Merchant merchant;
     private Dish dish;
     private int quantity;
     private LocalDateTime orderTime;
     private double totalPrice;
     private int status;                 // 订单状态 (0：待下单，1：下单成功，2：订单取消)
 
-    public Order(int studentID, int merchantID, Dish dish, int quantity, LocalDateTime orderTime, double totalPrice, int status) {
-        this.studentID = studentID;
-        this.merchantID = merchantID;
+    public Order(Student student, Merchant merchant, Dish dish, int quantity, LocalDateTime orderTime, double totalPrice, int status) {
+        this.student = student;
+        this.merchant = merchant;
         this.dish = dish;
         this.quantity = quantity;
         this.orderTime = orderTime;
@@ -24,10 +28,10 @@ public class Order {
         this.status = status;
     }
 
-    public Order(int orderID, int studentID, int merchantID, Dish dish, int quantity, LocalDateTime orderTime, double totalPrice, int status) {
+    public Order(int orderID, Student student, Merchant merchant, Dish dish, int quantity, LocalDateTime orderTime, double totalPrice, int status) {
         this.orderID = orderID;
-        this.studentID = studentID;
-        this.merchantID = merchantID;
+        this.student = student;
+        this.merchant = merchant;
         this.dish = dish;
         this.quantity = quantity;
         this.orderTime = orderTime;
@@ -40,13 +44,13 @@ public class Order {
     public int getOrderID() {
         return orderID;
     }
-    public int getStudentID() {
-        return studentID;
+    public Student getStudent() {
+        return student;
     }
-    public int getMerchantID() {
-        return merchantID;
+    public Merchant getMerchant() {
+        return merchant;
     }
-    public Dish getDishes() {
+    public Dish getDish() {
         return dish;
     }
     public int getQuantity() {
@@ -63,11 +67,14 @@ public class Order {
     }
 
     // Setters
-    public void setStudentID(int studentID) {
-        this.studentID = studentID;
+    public void setOrderID(int orderID) {
+        this.orderID = orderID;
     }
-    public void setMerchantID(int merchantID) {
-        this.merchantID = merchantID;
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+    public void setMerchant(Merchant merchant) {
+        this.merchant = merchant;
     }
     public void setDish(Dish dish) {
         this.dish = dish;
@@ -87,16 +94,22 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "订单号：" + orderID +
-                ", 下单学生ID：" + studentID +
-                ", 接单商家ID：" + merchantID +
-                ", 下单时间：" + orderTime +
-                ", 菜品：" + dish +
-                ", 总金额：" + totalPrice +
-                ", 订单状态：" + status +
-                "}";
+        String statusStr;
+        if (status == 1) {
+            statusStr = "下单成功";
+        } else {
+            statusStr = "订单取消";
+        }
+
+        return  "订单号：" + orderID +
+                "\n下单学生ID：" + student.getUserID() +
+                "\n接单商家：" + merchant.getUsername() +
+                "\n餐品：" + dish.getDishName() +
+                "\n数量：" + quantity +
+                "\n总金额：" + totalPrice +
+                "\n顾客手机：" + student.getPhone() +
+                "\n下单时间：" + orderTime.format(ofPattern("yyyy-MM-dd HH:mm:ss")) +
+                "\n送达地址：" + student.getAddress() +
+                "\n订单状态：" + statusStr;
     }
-
-
 }

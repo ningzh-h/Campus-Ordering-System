@@ -2,7 +2,7 @@ package main.java.entities.users;
 
 // 用户类
 public class User {
-    private int userId;
+    private int userID;
     private String username;  // 用户名，用于登录系统
     private String password;
     private String phone;
@@ -18,8 +18,8 @@ public class User {
     }
 
     // Getters
-    public int getUserId() {
-        return userId;
+    public int getUserID() {
+        return userID;
     }
     public String getUsername() {
         return username;
@@ -38,8 +38,8 @@ public class User {
     }
 
     // Setters
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
     public void setUsername(String username) {
         this.username = username;

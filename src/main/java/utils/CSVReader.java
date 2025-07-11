@@ -1,5 +1,6 @@
 package main.java.utils;
 
+import main.java.entities.Dish;
 import main.java.entities.users.Merchant;
 import main.java.entities.users.Student;
 import main.java.entities.users.User;
@@ -16,13 +17,26 @@ import java.util.List;
 public class CSVReader {
 
     private static final String USERS_CSV_PATH = "resources/sys/users.csv";
+    private static final String DISHES_CSV_PATH = "resources/sys/dishes.csv";
+    private static final String ORDERS_CSV_PATH = "resources/sys/orders.csv";
 
     /**
-     * 从 users.csv文件中读取所有用户ID
+     * 从文件中读取 ID
      */
-    public static List<Integer> readUserIDs() {
+    public static List<Integer> readIDs(String fileName) {
+        String filePath;
+
+        // 根据传入的文件名选择对应的CSV文件路径
+        if (fileName.equals("users")) {
+            filePath = USERS_CSV_PATH;
+        } else if (fileName.equals("orders")) {
+            filePath = ORDERS_CSV_PATH;
+        } else {
+            filePath = DISHES_CSV_PATH;
+        }
+
         List<Integer> userIDs = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(USERS_CSV_PATH))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             br.readLine();
             while ((line = br.readLine()) != null) {
@@ -146,17 +160,19 @@ public class CSVReader {
 
                 try {
                     int role = Integer.parseInt(values[5].trim());
-                    String address = values[4].trim();
 
                     // 检查是否为商家且地址匹配
-                    if (role == 1 && address.equals(canteenAddress)) {
-                        int userId = Integer.parseInt(values[0].trim());
-                        String username = values[1].trim();
-                        String password = values[2].trim();
-                        String phone = values[3].trim();
-                        String canteenOfMerchant = values[7].trim();
-                        String location = values[8].trim();
-                        merchantList.add(new Merchant(userId, username, password, phone, canteenOfMerchant, location));
+                    if (role == 1) {
+                        String address = values[7].trim();
+                        if (address.equals(canteenAddress)) {
+                            int userId = Integer.parseInt(values[0].trim());
+                            String username = values[1].trim();
+                            String password = values[2].trim();
+                            String phone = values[3].trim();
+                            String canteenOfMerchant = values[7].trim();
+                            String location = values[8].trim();
+                            merchantList.add(new Merchant(userId, username, password, phone, canteenOfMerchant, location));
+                        }
                     }
                 } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
                     System.err.println("解析商家数据时出错，行内容: " + line);
@@ -166,5 +182,39 @@ public class CSVReader {
             System.err.println("读取 users.csv 文件时出错: " + e.getMessage());
         }
             return merchantList;
+    }
+
+    /**
+     * 根据商家ID从 dishes.csv文件中读取菜品列表。
+     */
+    public static List<Dish> readDishesByMerchantID(int merchantID) {
+        List<Dish> dishList = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(DISHES_CSV_PATH))) {
+            String line;
+            br.readLine();
+            while ((line = br.readLine()) != null) {
+                // 跳过空行或注释/标题行
+                if (line.trim().isEmpty()) {
+                    continue;
+                }
+                String[] values = line.split(",");
+                try {
+                    // 检查商家ID是否匹配 (列索引 3)
+                    int csvMerchantID = Integer.parseInt(values[3].trim());
+                    if (csvMerchantID == merchantID) {
+                        int dishID = Integer.parseInt(values[0].trim());
+                        String dishName = values[1].trim();
+                        double price = Double.parseDouble(values[2].trim());
+                        int stock = Integer.parseInt(values[4].trim());
+                        dishList.add(new Dish(dishID, dishName, price, merchantID, stock));
+                    }
+                } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+                    System.err.println("解析菜品数据时出错，行内容: " + line);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("读取 dishes.csv 文件时出错: " + e.getMessage());
+        }
+        return dishList;
     }
 }

@@ -1,9 +1,12 @@
 package main.java.pages.student_pages.new_order;
 
 import main.java.entities.Dish;
+import main.java.entities.Order;
 import main.java.entities.users.Merchant;
 import main.java.entities.users.Student;
 import main.java.utils.Input;
+
+import static java.time.LocalDateTime.now;
 
 public class NewOrder {
     CanteenChoose canteenChoose = new CanteenChoose();
@@ -30,13 +33,18 @@ public class NewOrder {
                         quantity = Input.getInt("请输入订餐数量：");
 
                         System.out.println("正在为您生成订单...");
-                        // TODO: 创建新的Order, 并写入订单查询 csv 中, 应该加上 OrderService
-//                        Order order = new Order();
+                        Order order = new Order(
+                            currentUser,
+                            merchant,
+                            dish,
+                            quantity,
+                            now(),
+                            dish.getPrice() * quantity,
+                            1
+                        );
                         System.out.println("已为您生成订单！");
-
                         System.out.println("订单信息：");
-                        // TODO: Order 的 toTable 方法
-//                        order.toTable();
+                        System.out.println(order);
                         return;
                     }
                 } else {

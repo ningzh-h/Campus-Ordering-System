@@ -1,1 +1,4 @@
-order_id,student_id,merchant_id,dish_id,qauntity,total_price,time,status
+orderID,studentID,merchantID,dishName,quantity,totalPrice,orderTime,status
+1,1,13,香辣鸡腿堡套餐,2,72.0,2025-07-11 19:54:11,1
+2,1,15,珍珠奶茶,3,21.0,2025-07-11 19:54:30,1
+3,1,18,四季奶青,6,90.0,2025-07-11 19:54:38,1

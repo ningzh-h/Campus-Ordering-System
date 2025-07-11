@@ -15,7 +15,7 @@ public class Student extends User{
     // 重载构造函数 - 用于登录验证
     public Student(int userID, String username, String password, String phone, String address, String studentID) {
         super(username, password, phone, address);
-        super.setUserId(userID);
+        super.setUserID(userID);
         super.setRole(0);
         this.studentID = studentID;
     }

@@ -9,14 +9,14 @@ public class Dish {
     private int stock;
 
     // 构造函数
-    public Dish(String dishName, int price, int merchantId, int stock) {
+    public Dish(String dishName, double price, int merchantId, int stock) {
         this.dishName = dishName;
         this.price = price;
         this.merchantID = merchantId;
         this.stock = stock;
     }
 
-    public Dish(int dishID, String dishName, int price, int merchantId, int stock) {
+    public Dish(int dishID, String dishName, double price, int merchantId, int stock) {
         this.dishID = dishID;
         this.dishName = dishName;
         this.price = price;
@@ -59,5 +59,4 @@ public class Dish {
     public String toString() {
         return dishName + ", 价格：" + price;
     }
-
 }

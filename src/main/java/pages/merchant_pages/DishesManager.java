@@ -11,7 +11,7 @@ public class DishesManager {
 
     public void dishesManager(Merchant currentUser) {
         // TODO: dishes 来自商家类 Merchant
-//        dishes = currentUser.getDishes();
+//        dishes = currentUser.getDish();
         System.out.println("=== 菜品管理 ===");
         System.out.println("1. 新增菜品");
         System.out.println("2. 删除菜品");

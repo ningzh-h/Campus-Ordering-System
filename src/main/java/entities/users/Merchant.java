@@ -16,7 +16,7 @@ public class Merchant extends User {
     // 重载构造函数 - 用于登录验证
     public Merchant(int userID, String username, String password, String phone, String canteen, String location) {
         super(username, password, phone, canteen + location);
-        super.setUserId(userID);
+        super.setUserID(userID);
         super.setRole(1);
         this.canteen = canteen;
         this.location = location;

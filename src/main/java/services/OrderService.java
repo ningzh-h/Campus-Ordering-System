@@ -1,8 +1,26 @@
 package main.java.services;
 
+import main.java.entities.Order;
+import main.java.utils.CSVReader;
+import main.java.utils.CSVWriter;
+
+import java.util.List;
+
 public class OrderService {
-    public OrderService() {
+
+    public void createOrder(Order order) {
+        List<Integer> orderIDs = CSVReader.readIDs("orders");
+
+        if (orderIDs.isEmpty()) {
+            order.setOrderID(1);
+        } else {
+            int maxOrderID = orderIDs.stream().max(Integer::compareTo).orElse(0);
+            order.setOrderID(maxOrderID + 1);
+        }
+
+        CSVWriter.writeOrder(order);
         System.out.println("提交订单");
     }
+
 
 }

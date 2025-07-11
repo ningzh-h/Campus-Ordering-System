@@ -28,14 +28,14 @@ public class LoginService {
      * 注册新用户
      */
     public void register(User user) {
-        List<Integer> userIDs = CSVReader.readUserIDs();
+        List<Integer> userIDs = CSVReader.readIDs("users");
 
         if (userIDs.isEmpty()) {
-            user.setUserId(1);  // 如果用户列表为空，则ID从1开始设置
+            user.setUserID(1);  // 如果用户列表为空，则ID从1开始设置
         } else {
             // 获取当前最大用户ID，并设置新用户ID为最大ID加1
-            int maxUserId = userIDs.stream().max(Integer::compareTo).orElse(0);
-            user.setUserId(maxUserId + 1);
+            int maxUserID = userIDs.stream().max(Integer::compareTo).orElse(0);
+            user.setUserID(maxUserID + 1);
         }
         CSVWriter.writeUser(user);
     }
