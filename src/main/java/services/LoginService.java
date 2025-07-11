@@ -37,7 +37,7 @@ public class LoginService {
             int maxUserID = userIDs.stream().max(Integer::compareTo).orElse(0);
             user.setUserID(maxUserID + 1);
         }
-        CSVWriter.writeUser(user);
+        CSVWriter.write(user);
     }
 
     /**

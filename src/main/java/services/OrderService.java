@@ -5,6 +5,7 @@ import main.java.entities.Order;
 import main.java.utils.CSVReader;
 import main.java.utils.CSVUpdater;
 import main.java.utils.CSVWriter;
+import main.java.utils.Input;
 
 import java.util.List;
 
@@ -20,12 +21,10 @@ public class OrderService {
             order.setOrderID(maxOrderID + 1);
         }
         Dish dish = order.getDish();
-        dish.updatePopularity();
+        dish.setPopularity(order.getQuantity());
 
-        CSVWriter.writeOrder(order);
+        CSVWriter.write(order);
         CSVUpdater.update(dish);
-        System.out.println("提交订单");
+        Input.jump("按回车键提交订单");
     }
-
-
 }

@@ -6,6 +6,7 @@ import main.java.entities.users.Student;
 import main.java.entities.users.User;
 
 import java.io.*;
+import java.util.List;
 
 
 public class CSVUpdater {
@@ -134,6 +135,54 @@ public class CSVUpdater {
                 System.err.println("未找到该菜品ID！");
             }
 
+        } catch (IOException e) {
+            System.err.println("更新 dishes.csv 时出错: " + e.getMessage());
+        }
+
+        if (inputFile.delete()) {
+            if (tempFile.renameTo(inputFile)) {
+                System.out.println("用户信息更新成功！");
+            } else {
+                System.err.println("重命名临时文件失败！");
+            }
+        } else {
+            System.err.println("删除原始文件失败！");
+            if(!tempFile.delete()) {
+                System.err.println("删除临时文件失败，请手动清理！");
+            }
+        }
+    }
+
+    public static void delete(Dish dish) {
+        File inputFile = new File(DISHES_CSV_PATH);
+        File tempFile = new File(TEMP_CSV_PATH);
+        try (BufferedReader br = new BufferedReader(new FileReader(inputFile));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(tempFile))) {
+
+            // 写入标题行
+            String header = br.readLine();
+            bw.write(header != null ? header : DISHES_CSV_HEADER);
+            bw.newLine();
+
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (line.trim().isEmpty()) {
+                    continue;
+                }
+                String[] values = line.split(",");
+
+                try {
+                    int dishID = Integer.parseInt(values[0].trim());
+
+                    if (dishID != dish.getDishID()) {
+                        bw.write(String.join(",", values));
+                    }
+
+                    bw.newLine();
+                } catch (Exception e) {
+                    System.err.println("无效行！");
+                }
+            }
         } catch (IOException e) {
             System.err.println("更新 dishes.csv 时出错: " + e.getMessage());
         }

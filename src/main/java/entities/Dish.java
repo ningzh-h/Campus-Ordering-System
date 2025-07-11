@@ -48,10 +48,13 @@ public class Dish {
     }
 
     // Setters
+    public void setDishID(int dishID) {
+        this.dishID = dishID;
+    }
     public void setDishName(String dishName) {
         this.dishName = dishName;
     }
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
     public void setMerchantID(int merchantID) {
@@ -60,13 +63,13 @@ public class Dish {
     public void setStock(int stock) {
         this.stock = stock;
     }
+    public void setPopularity(int quantity) {
+        popularity += quantity;
+    }
     public void resetPopularity() {
         popularity = 0;
     }
 
-    public void updatePopularity() {
-        popularity++;
-    }
 
     @Override
     public String toString() {

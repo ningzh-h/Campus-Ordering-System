@@ -2,6 +2,7 @@ package main.java.pages.merchant_pages;
 
 import main.java.entities.users.Merchant;
 import main.java.entities.users.User;
+import main.java.pages.merchant_pages.dishes_manager.DishesManager;
 import main.java.pages.merchant_pages.merchant_info.MerchantInfo;
 import main.java.utils.Input;
 

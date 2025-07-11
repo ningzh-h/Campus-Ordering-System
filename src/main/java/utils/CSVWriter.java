@@ -1,5 +1,6 @@
 package main.java.utils;
 
+import main.java.entities.Dish;
 import main.java.entities.Order;
 import main.java.entities.users.Merchant;
 import main.java.entities.users.Student;
@@ -22,7 +23,7 @@ public class CSVWriter {
     /**
      * 将用户写入 users.csv 文件
      */
-    public static void writeUser(User user) {
+    public static void write(User user) {
         // 使用 true 参数来开启追加模式
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(USERS_CSV_PATH, true))) {
             StringBuilder sb = new StringBuilder();
@@ -49,7 +50,7 @@ public class CSVWriter {
     /**
      * 将订单信息写入 orders.csv 文件。
      */
-    public static void writeOrder(Order order) {
+    public static void write(Order order) {
         // 使用 true 参数来开启追加模式
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(ORDERS_CSV_PATH, true))) {
             String orderStr = order.getOrderID() + "," +
@@ -64,6 +65,22 @@ public class CSVWriter {
             bw.newLine();
         } catch (IOException e) {
             System.err.println("写入 orders.csv 文件时出错: " + e.getMessage());
+        }
+    }
+
+    public static void write(Dish dish) {
+        // 使用 true 参数来开启追加模式
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(DISHES_CSV_PATH, true))) {
+            String dishStr = dish.getDishID() + "," +
+                    dish.getDishName() + "," +
+                    dish.getPrice() + "," +
+                    dish.getMerchantID() + "," +
+                    dish.getStock() + "," +
+                    dish.getPopularity();
+            bw.write(dishStr);
+            bw.newLine();
+        } catch (IOException e) {
+            System.err.println("写入 dishes.csv 文件时出错: " + e.getMessage());
         }
     }
 }

@@ -35,4 +35,20 @@ public class Input {
         System.out.println(intro);
         scanner.nextLine();
     }
+
+    public static double getDouble(String intro) {
+        double doubleInput;
+        while (true) {
+            try {
+                System.out.println(intro);
+                doubleInput = scanner.nextDouble();
+                scanner.nextLine(); // 清除缓冲区
+                break;
+            } catch (Exception e) {
+                System.out.println("无效！请重新输入。");
+                scanner.nextLine(); // 清除缓冲区
+            }
+        }
+        return doubleInput;
+    }
 }

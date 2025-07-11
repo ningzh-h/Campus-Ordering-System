@@ -7,7 +7,7 @@ public class MerchantInfo {
     EditMerchantInfo editMerchantInfo = new EditMerchantInfo();
 
     public void merchantInfo(Merchant currentUser) {
-        System.out.println("=== 个人信息 ===");
+        System.out.println("=== 商家信息 ===");
         System.out.println("1. 用户名：" + currentUser.getUsername());
         System.out.println("2. 用户ID：" + currentUser.getUserID());
         System.out.println("3. 密码设置");
