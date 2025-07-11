@@ -2,26 +2,31 @@ package main.java.entities;
 
 // 菜品类
 public class Dish {
-    private static int nextId = 1;    // 用于生成下一个菜品ID的静态变量
-
-    private final int dishId;
+    private int dishID;
     private String dishName;
     private double price;
-    private int merchantId;          // 菜品所属的商家ID
+    private int merchantID;          // 菜品所属的商家ID
     private int stock;
 
     // 构造函数
     public Dish(String dishName, int price, int merchantId, int stock) {
-        this.dishId = nextId++;
         this.dishName = dishName;
         this.price = price;
-        this.merchantId = merchantId;
+        this.merchantID = merchantId;
+        this.stock = stock;
+    }
+
+    public Dish(int dishID, String dishName, int price, int merchantId, int stock) {
+        this.dishID = dishID;
+        this.dishName = dishName;
+        this.price = price;
+        this.merchantID = merchantId;
         this.stock = stock;
     }
 
     // Getters
-    public int getDishId() {
-        return dishId;
+    public int getDishID() {
+        return dishID;
     }
     public String getDishName() {
         return dishName;
@@ -29,8 +34,8 @@ public class Dish {
     public double getPrice() {
         return price;
     }
-    public int getMerchantId() {
-        return merchantId;
+    public int getMerchantID() {
+        return merchantID;
     }
     public int getStock() {
         return stock;
@@ -43,8 +48,8 @@ public class Dish {
     public void setPrice(int price) {
         this.price = price;
     }
-    public void setMerchantId(int merchantId) {
-        this.merchantId = merchantId;
+    public void setMerchantID(int merchantID) {
+        this.merchantID = merchantID;
     }
     public void setStock(int stock) {
         this.stock = stock;

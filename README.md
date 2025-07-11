@@ -7,7 +7,7 @@
 
 ```commandline
 src/
-├─ code/
+├─ main/
 │  ├─ java/
 │  │  ├─ Main.java        # 程序入口, 流程控制
 │  │  ├─ entities/        # 实体类
@@ -53,8 +53,8 @@ src/
 │     └─
 │  
 ├─ resources/
-│  ├─ input/  # 系统内部数据
-│  └─ output/ # 数据分析输出数据
+│  ├─ sys/  # 系统内部数据
+│  └─ analyze/ # 数据分析输出数据
 └─ README # 自述文件
 
 ```
