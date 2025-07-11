@@ -108,6 +108,63 @@ public class CSVReader {
         return null; // 未找到用户
     }
 
+    /**
+     * 根据食堂编号从 users.csv 文件中读取商家列表
+     */
+    public static List<Merchant> readMerchantByCanteen(int canteen) {
+        List<Merchant> merchantList = new ArrayList<>();
+        String canteenAddress;
+
+        switch (canteen) {
+            case 1:
+                canteenAddress = "一食堂";
+                break;
+            case 2:
+                canteenAddress = "二食堂";
+                break;
+            case 3:
+                canteenAddress = "三食堂";
+                break;
+            case 4:
+                canteenAddress = "四食堂";
+                break;
+            default:
+                // 如果食堂编号无效，返回空列表
+                return merchantList;
+        }
+
+        try (BufferedReader br = new BufferedReader(new FileReader(USERS_CSV_PATH))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                // 跳过空行或注释/标题行
+                if (line.trim().isEmpty() || line.trim().startsWith("#")) {
+                    continue;
+                }
+                String[] values = line.split(",");
+
+                try {
+                    int role = Integer.parseInt(values[5].trim());
+                    String address = values[4].trim();
+
+                    // 检查是否为商家且地址匹配
+                    if (role == 1 && address.equals(canteenAddress)) {
+                        int userId = Integer.parseInt(values[0].trim());
+                        String username = values[1].trim();
+                        String password = values[2].trim();
+                        String phone = values[3].trim();
+                        String merchantName = values[7].trim();
+                        merchantList.add(new Merchant(userId, username, password, phone, address, merchantName));
+                    }
+                } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+                    System.err.println("解析商家数据时出错，行内容: " + line);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("读取 users.csv 文件时出错: " + e.getMessage());
+        }
+            return merchantList;
+    }
+
 
 
 }
