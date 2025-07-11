@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/input/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/input/users.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/login_pages/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/login_pages/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/CanteenChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/CanteenChoose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/MerchantChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/MerchantChoose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/NewOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/NewOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/CSVReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "正在合并 master",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/Learning/CS/java/math_practice/Campus-Ordering-System1",
     "node.js.detected.package.eslint": "true",

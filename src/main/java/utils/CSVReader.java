@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class CSVReader {
 
-    private static final String USERS_CSV_PATH = "src/data/input/users.csv";
+    private static final String USERS_CSV_PATH = "resources/sys/users.csv";
 
     /**
      * 从 users.csv文件中读取所有用户ID
@@ -24,9 +24,10 @@ public class CSVReader {
         List<Integer> userIDs = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(USERS_CSV_PATH))) {
             String line;
+            br.readLine();
             while ((line = br.readLine()) != null) {
                 // 跳过空行或注释/标题行
-                if (line.trim().isEmpty() || line.trim().startsWith("#")) {
+                if (line.trim().isEmpty()) {
                     continue;
                 }
                 String[] values = line.split(",");
@@ -52,9 +53,10 @@ public class CSVReader {
         List<String> usernames = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(USERS_CSV_PATH))) {
             String line;
+            br.readLine();
             while ((line = br.readLine()) != null) {
                 // 跳过空行或注释/标题行
-                if (line.trim().isEmpty() || line.trim().startsWith("#")) {
+                if (line.trim().isEmpty()) {
                     continue;
                 }
                 String[] values = line.split(",");
@@ -72,7 +74,6 @@ public class CSVReader {
     public static User readUserByUsername(String username) {
         try (BufferedReader br = new BufferedReader(new FileReader(USERS_CSV_PATH))) {
             String line;
-            // 跳过标题行
             br.readLine();
             while ((line = br.readLine()) != null) {
                 if (line.trim().isEmpty()) {
@@ -94,8 +95,9 @@ public class CSVReader {
                             return new Student(userId, username, password, phone, address, studentId);
                         }
                         if (role == 1) {
-                            String merchantName = values[7];
-                            return new Merchant(userId, username, password, phone, address, merchantName);
+                            String canteen = values[7];
+                            String location = values[8];
+                            return new Merchant(userId, username, password, phone, canteen, location);
                         }
                     } catch (NumberFormatException e) {
                         System.err.println("解析用户数据时出错，行内容: " + line);
@@ -135,8 +137,8 @@ public class CSVReader {
 
         try (BufferedReader br = new BufferedReader(new FileReader(USERS_CSV_PATH))) {
             String line;
+            br.readLine();
             while ((line = br.readLine()) != null) {
-                // 跳过空行或注释/标题行
                 if (line.trim().isEmpty() || line.trim().startsWith("#")) {
                     continue;
                 }
@@ -152,8 +154,9 @@ public class CSVReader {
                         String username = values[1].trim();
                         String password = values[2].trim();
                         String phone = values[3].trim();
-                        String merchantName = values[7].trim();
-                        merchantList.add(new Merchant(userId, username, password, phone, address, merchantName));
+                        String canteenOfMerchant = values[7].trim();
+                        String location = values[8].trim();
+                        merchantList.add(new Merchant(userId, username, password, phone, canteenOfMerchant, location));
                     }
                 } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
                     System.err.println("解析商家数据时出错，行内容: " + line);
