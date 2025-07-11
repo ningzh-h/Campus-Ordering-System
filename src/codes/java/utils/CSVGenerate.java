@@ -9,8 +9,7 @@ import codes.java.entities.users.User;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
-import java.util.stream.Collectors;
+import static java.time.format.DateTimeFormatter.ofPattern;
 
 /**
  * CSVGenerate 类用于将数据写入 CSV 文件
@@ -36,12 +35,10 @@ public class CSVGenerate {
             sb.append(user.getAddress()).append(",");
             sb.append(user.getRole()).append(",");
 
-            if (user instanceof Student) {
-                Student student = (Student) user;
+            if (user instanceof Student student) {
                 sb.append(student.getStudentID()).append(",");
                 sb.append("NULL"); // 学生没有 merchantName 字段
-            } else if (user instanceof Merchant) {
-                Merchant merchant = (Merchant) user;
+            } else if (user instanceof Merchant merchant) {
                 sb.append("NULL").append(","); // 商家没有 studentId 字段
                 sb.append(merchant.getMerchantName());
             }
@@ -49,6 +46,30 @@ public class CSVGenerate {
             bw.newLine();
         } catch (IOException e) {
             System.err.println("追加写入 users.csv 文件时出错: " + e.getMessage());
+        }
+    }
+
+
+    /**
+     * 将订单信息写入 orders.csv 文件。
+     */
+    public static void writeOrder(Order order) {
+        // 使用 true 参数来开启追加模式
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(ORDERS_CSV_PATH, true))) {
+            String sb = order.getOrderId() + "," +
+                    order.getStudent().getUserId() + "," +
+                    order.getMerchant().getUserId() + "," +
+                    order.getDish().getDishName() + "," +
+                    order.getQuantity() + "," +
+                    order.getTotalPrice() + "," +
+                    order.getOrderTime().format(ofPattern("yyyy-MM-dd HH:mm:ss")) + "," +
+                    order.getAddress() + "," +
+                    order.getPhone() + "," +
+                    order.getStatus();
+            bw.write(sb);
+            bw.newLine();
+        } catch (IOException e) {
+            System.err.println("写入 orders.csv 文件时出错: " + e.getMessage());
         }
     }
 

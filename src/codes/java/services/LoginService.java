@@ -32,7 +32,7 @@ public class LoginService {
      * 注册新用户
      */
     public boolean register(User user) {
-        List<Integer> userIDs = CSVReader.readUserIDs();
+        List<Integer> userIDs = CSVReader.readIDs("users");
         List<String> userNames = CSVReader.readUserNames();
 
         // 检查用户名是否已存在

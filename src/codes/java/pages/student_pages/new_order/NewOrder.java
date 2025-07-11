@@ -4,7 +4,10 @@ import codes.java.entities.Dish;
 import codes.java.entities.Order;
 import codes.java.entities.users.Merchant;
 import codes.java.entities.users.Student;
+import codes.java.services.OrderService;
+import codes.java.utils.CSVGenerate;
 import codes.java.utils.Input;
+import static java.time.LocalDateTime.now;
 
 public class NewOrder {
     Input input = new Input();
@@ -32,13 +35,10 @@ public class NewOrder {
                         quantity = input.getInt("请输入订餐数量：");
 
                         System.out.println("正在为您生成订单...");
-                        // TODO: 创建新的Order
-//                        Order order = new Order();
+                        Order order = new Order(currentUser, merchant, now(), dish, quantity, dish.getPrice() * quantity, 1, currentUser.getAddress(), currentUser.getPhone());
+                        OrderService.createOrder(order);
                         System.out.println("已为您生成订单！");
-
-                        System.out.println("订单信息：");
-                        // TODO: Order 的 toTable 方法
-//                        order.toTable();
+                        System.out.println("订单信息：\n" + order);
                         return;
                     }
                 } else {

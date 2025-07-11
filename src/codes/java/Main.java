@@ -1,5 +1,6 @@
 package codes.java;
 
+import codes.java.entities.Order;
 import codes.java.entities.users.Merchant;
 import codes.java.entities.users.Student;
 import codes.java.entities.users.User;

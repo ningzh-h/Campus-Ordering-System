@@ -21,11 +21,22 @@ public class CSVReader {
     private static final String ORDERS_CSV_PATH = "src/data/input/orders.csv";
 
     /**
-     * 从 users.csv文件中读取所有用户ID
+     * 从文件中读取ID
      */
-    public static List<Integer> readUserIDs() {
+    public static List<Integer> readIDs(String fileName) {
+        String filePath;
+
+        // 根据传入的文件名选择对应的CSV文件路径
+        if (fileName.equals("users")) {
+            filePath = USERS_CSV_PATH;
+        } else if (fileName.equals("orders")) {
+            filePath = ORDERS_CSV_PATH;
+        } else {
+            filePath = DISHES_CSV_PATH;
+        }
+
         List<Integer> userIDs = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(USERS_CSV_PATH))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = br.readLine()) != null) {
                 // 跳过空行或注释/标题行
