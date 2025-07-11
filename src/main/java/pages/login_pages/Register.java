@@ -57,7 +57,7 @@ public class Register {
             case 2:
                 String userName_m;
                 while (true) {
-                    userName_m = Input.getString("请输入用户名：");
+                    userName_m = Input.getString("请输入店铺名称：");
                     if (loginService.checkUsername(userName_m)) {
                         break;
                     } else {

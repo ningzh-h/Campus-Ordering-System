@@ -5,25 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/sys/users.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/input/users.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/input/dishes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/dishes.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/input/merchants.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/input/orders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/orders.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/input/students.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/users/Merchant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/users/Merchant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/users/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/users/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/users/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/login_pages/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/login_pages/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/input/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/input/users.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/login_pages/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/login_pages/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/DishesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/DishesManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/MerchantPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/MerchantPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/CanteenChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/CanteenChoose.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/MerchantChoose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/MerchantChoose.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/NewOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/student_pages/new_order/NewOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LoginService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/CSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/CSVWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Input.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Class" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -49,8 +37,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:ningzh-h/Campus-Ordering-System.git&quot;,
-    &quot;accountId&quot;: &quot;e7c46313-4246-4ed5-922c-43c354c39f6a&quot;
+    &quot;url&quot;: &quot;git@github.com:/Elliot-04/Campus-Ordering-System.git&quot;,
+    &quot;accountId&quot;: &quot;f5a30c6d-5a56-4f98-b824-bd4b57fb8c5a&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -74,20 +62,25 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "正在合并 master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "N:/Study/Coding/Java/CampusOrderingSystem",
+    "last_opened_file_path": "D:/Learning/CS/java/math_practice/Campus-Ordering-System1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.maddyhome.idea.vim.ui.VimEmulationConfigurable",
-    "应用程序.CSVReader.executor": "Run",
-    "应用程序.Main.executor": "Run",
-    "应用程序.User.executor": "Run"
+    "settings.editor.selected.configurable": "preferences.toDoOptions",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.Main.executor": "Run"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Learning\CS\java\math_practice\Campus-Ordering-System1" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="N:\Study\Coding\Java\CampusOrderingSystem\resources\input" />
-      <recent name="N:\Study\Coding\Java\CampusOrderingSystem\resources" />
       <recent name="N:\Study\Coding\Java\CampusOrderingSystem\src\data\input" />
       <recent name="N:\Study\Coding\Java\CampusOrderingSystem\src" />
     </key>
@@ -136,6 +129,14 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26574.91" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26574.91" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -144,8 +145,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1751899214343</updated>
+      <workItem from="1752208622770" duration="2587000" />
     </task>
+    <task id="LOCAL-00001" summary="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能">
+      <option name="closed" value="true" />
+      <created>1752208817428</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752208817428</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -157,5 +171,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新自述文件，添加了 Python 数据分析" />
+    <MESSAGE value="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
