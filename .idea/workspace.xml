@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="">
+    <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/MerchantPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/MerchantPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/dishes_manager/DishesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/DishesManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/merchant_info/MerchantInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/MerchantInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/orders_manager/OrdersManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/OrdersManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/sales_analyzer/SalesAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/codes/java/pages/merchant_pages/SalesAnalyzer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +29,12 @@
     &quot;assignee&quot;: &quot;ningzh-h&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:ningzh-h/Campus-Ordering-System.git&quot;,
-    &quot;accountId&quot;: &quot;e7c46313-4246-4ed5-922c-43c354c39f6a&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:/Elliot-04/Campus-Ordering-System.git",
+    "accountId": "f5a30c6d-5a56-4f98-b824-bd4b57fb8c5a"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -54,24 +47,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python.data_analyzer.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;N:/Study/Coding/Java/CampusOrderingSystem&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.toDoOptions&quot;,
-    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.data_analyzer.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Learning/CS/java/math_practice/Campus-Ordering-System1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.toDoOptions",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.Main.executor": "Run"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Learning\CS\java\math_practice\Campus-Ordering-System1" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="N:\Study\Coding\Java\CampusOrderingSystem\src\data\input" />
       <recent name="N:\Study\Coding\Java\CampusOrderingSystem\src" />
@@ -121,6 +123,14 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26574.91" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26574.91" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -129,8 +139,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1751899214343</updated>
+      <workItem from="1752208622770" duration="2587000" />
     </task>
+    <task id="LOCAL-00001" summary="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能">
+      <option name="closed" value="true" />
+      <created>1752208817428</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752208817428</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -142,5 +165,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新自述文件，添加了 Python 数据分析" />
+    <MESSAGE value="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能" />
   </component>
 </project>

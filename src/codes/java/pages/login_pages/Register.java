@@ -60,7 +60,7 @@ public class Register {
                 }
 
                 String phone_m = input.getString("请输入您的电话：");
-                String address_m = input.getString("请输入您的地址：");
+                String address_m = input.getString("请输入您的所属食堂（如：一食堂）：");
 
                 String shopName = input.getString("请输入您的店铺名称：");
                 Merchant merchant = new Merchant(userName_m, password_m, phone_m, address_m, shopName);

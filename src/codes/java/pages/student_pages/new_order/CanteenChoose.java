@@ -5,9 +5,9 @@ import codes.java.utils.Input;
 
 public class CanteenChoose {
     Input input = new Input();
-    String canteen;
+    int canteen;
 
-    public String chooseCanteen() {
+    public int chooseCanteen() {
         System.out.println("\n=== 新建订单 ===");
         System.out.println("1. 一食堂");
         System.out.println("2. 二食堂");
@@ -19,18 +19,18 @@ public class CanteenChoose {
 
         switch (choice) {
             case 0:
-                return "R";
+                return 0;
             case 1:
-                canteen = "一食堂";
+                canteen = 1;
                 break;
             case 2:
-                canteen = "二食堂";
+                canteen = 2;
                 break;
             case 3:
-                canteen = "三食堂";
+                canteen = 3;
                 break;
             case 4:
-                canteen = "四食堂";
+                canteen = 4;
                 break;
             default:
                 System.out.println("无效选择！");

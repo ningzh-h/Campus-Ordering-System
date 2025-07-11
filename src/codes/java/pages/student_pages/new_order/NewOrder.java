@@ -9,7 +9,7 @@ import codes.java.utils.Input;
 public class NewOrder {
     Input input = new Input();
     CanteenChoose canteenChoose = new CanteenChoose();
-    String canteen;
+    int canteen;
     MerchantChoose merchantChoose = new MerchantChoose();
     Merchant merchant;
     DishChoose dishChoose = new DishChoose();
@@ -18,7 +18,7 @@ public class NewOrder {
 
     public void newOrder(Student currentUser) {
         canteen = canteenChoose.chooseCanteen();
-        if (!canteen.equals("R")) {
+        if (canteen != 0) {
             while (true) {
                 merchant = merchantChoose.chooseMerchant(canteen);
                 if(merchant != null) {
