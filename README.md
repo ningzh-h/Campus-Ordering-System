@@ -52,7 +52,7 @@ src/
 │     ├─ data_analyzer.py
 │     └─
 │  
-├─ data/
+├─ resources/
 │  ├─ input/  # 系统内部数据
 │  └─ output/ # 数据分析输出数据
 └─ README # 自述文件
