@@ -1,5 +1,6 @@
 package codes.java.utils;
 
+import codes.java.entities.Dish;
 import codes.java.entities.users.Merchant;
 import codes.java.entities.users.Student;
 import codes.java.entities.users.User;
@@ -16,6 +17,8 @@ import java.util.List;
 public class CSVReader {
 
     private static final String USERS_CSV_PATH = "src/data/input/users.csv";
+    private static final String DISHES_CSV_PATH = "src/data/input/dishes.csv";
+    private static final String ORDERS_CSV_PATH = "src/data/input/orders.csv";
 
     /**
      * 从 users.csv文件中读取所有用户ID
@@ -163,6 +166,39 @@ public class CSVReader {
             System.err.println("读取 users.csv 文件时出错: " + e.getMessage());
         }
             return merchantList;
+    }
+
+    /**
+     * 根据商家ID从 dishes.csv文件中读取菜品列表。
+     */
+    public static List<Dish> readDishesByMerchantID(int merchantID) {
+        List<Dish> dishList = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(DISHES_CSV_PATH))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                // 跳过空行或注释/标题行
+                if (line.trim().isEmpty() || line.trim().startsWith("#")) {
+                    continue;
+                }
+                String[] values = line.split(",");
+                try {
+                    // 检查商家ID是否匹配 (列索引 3)
+                    int csvMerchantID = Integer.parseInt(values[3].trim());
+                    if (csvMerchantID == merchantID) {
+                        int dishID = Integer.parseInt(values[0].trim());
+                        String dishName = values[1].trim();
+                        double price = Double.parseDouble(values[2].trim());
+                        int stock = Integer.parseInt(values[4].trim());
+                        dishList.add(new Dish(dishID, dishName, price, merchantID, stock));
+                    }
+                } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+                    System.err.println("解析菜品数据时出错，行内容: " + line);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("读取 dishes.csv 文件时出错: " + e.getMessage());
+        }
+        return dishList;
     }
 
 

@@ -3,6 +3,7 @@ package codes.java.pages.student_pages.new_order;
 import codes.java.entities.Dish;
 import codes.java.entities.users.Merchant;
 import codes.java.services.OrderService;
+import codes.java.utils.CSVReader;
 import codes.java.utils.Input;
 
 import java.util.List;
@@ -16,11 +17,9 @@ public class DishChoose {
     public Dish chooseDish(Merchant merchant) {
 
         System.out.println("\n=== 新建订单 ===");
-        // TODO: Merchant 的 getDishList() 方法, 返回商家菜品列表
-//        dishList = merchant.getDishList();
-        int len = dishList.size();
-        for (int i = 0; i < len; i++) {
-            System.out.println((i+1) + ". " + dishList.get(i));
+        dishList = CSVReader.readDishesByMerchantID(merchant.getUserId());
+        for (int i = 0; i < dishList.size(); i++) {
+            System.out.println((i + 1) + ". " + dishList.get(i).getDishName());
         }
         System.out.println("0. 重新选择商家");
         int choice = input.getInt("请选择菜品：");

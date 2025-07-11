@@ -11,8 +11,17 @@ public class Dish {
     private int stock;
 
     // 构造函数
-    public Dish(String dishName, int price, int merchantId, int stock) {
+    public Dish(String dishName, double price, int merchantId, int stock) {
         this.dishId = nextId++;
+        this.dishName = dishName;
+        this.price = price;
+        this.merchantId = merchantId;
+        this.stock = stock;
+    }
+
+    // 重载构造函数 - 用于展示商家餐品列表
+    public Dish(int dishID, String dishName, double price, int merchantId, int stock) {
+        this.dishId = dishID;
         this.dishName = dishName;
         this.price = price;
         this.merchantId = merchantId;
