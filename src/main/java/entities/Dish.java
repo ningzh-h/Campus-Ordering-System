@@ -63,8 +63,9 @@ public class Dish {
     public void setStock(int stock) {
         this.stock = stock;
     }
-    public void setPopularity(int quantity) {
-        popularity += quantity;
+    public void setPopularity(int popularity) {
+        // 这里改回常规写法，因为原来的写法对于取消订单扣除热度时不太友好
+        this.popularity = popularity;
     }
     public void resetPopularity() {
         popularity = 0;

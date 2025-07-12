@@ -28,8 +28,8 @@ public class OrderService {
             return false;
         }
 
-        dish.setPopularity(order.getQuantity());              // +餐品热度
-        dish.setStock(dish.getStock() - order.getQuantity()); // -餐品库存
+        dish.setPopularity(dish.getPopularity() + order.getQuantity());      // +餐品热度
+        dish.setStock(dish.getStock() - order.getQuantity());                // -餐品库存
 
         CSVWriter.write(order);
         CSVUpdater.update(dish);
@@ -38,6 +38,10 @@ public class OrderService {
     }
 
     public void cancelOrder(Order order) {
+        Dish dish = order.getDish();
+        dish.setPopularity(dish.getPopularity() - order.getQuantity());
+        dish.setStock(dish.getStock() + order.getQuantity());
+        CSVUpdater.update(dish);
         CSVUpdater.updateOrderStatus(order.getOrderID());
         System.out.println("订单已取消！");
     }
