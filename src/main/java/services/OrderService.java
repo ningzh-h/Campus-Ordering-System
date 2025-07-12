@@ -11,7 +11,7 @@ import java.util.List;
 
 public class OrderService {
 
-    public void createOrder(Order order) {
+    public boolean createOrder(Order order) {
         List<Integer> orderIDs = CSVReader.readIDs("orders");
 
         if (orderIDs.isEmpty()) {
@@ -21,11 +21,20 @@ public class OrderService {
             order.setOrderID(maxOrderID + 1);
         }
         Dish dish = order.getDish();
-        dish.setPopularity(order.getQuantity());
+
+        if (dish.getStock() < order.getQuantity()) {
+            System.out.println("库存不足，无法完成订单！");
+            Input.jump("按回车键返回");
+            return false;
+        }
+
+        dish.setPopularity(order.getQuantity());              // +餐品热度
+        dish.setStock(dish.getStock() - order.getQuantity()); // -餐品库存
 
         CSVWriter.write(order);
         CSVUpdater.update(dish);
         Input.jump("按回车键提交订单");
+        return true;
     }
 
     public void cancelOrder(Order order) {

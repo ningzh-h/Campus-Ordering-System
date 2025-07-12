@@ -73,6 +73,6 @@ public class Dish {
 
     @Override
     public String toString() {
-        return dishName + ", 价格：" + price;
+        return dishName + ", 价格：" + price + "元";
     }
 }
