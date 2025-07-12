@@ -203,9 +203,9 @@ public class CSVUpdater {
     }
 
     /**
-     * 根据订单ID更新订单状态，将状态设置为 2 (取消)
+     * 根据订单ID更新订单状态，将状态设置为newStatus
      */
-    public static void updateOrderStatus(int orderID) {
+    public static void updateOrderStatus(int orderID, int newStatus) {
         File orderFile = new File(ORDERS_CSV_PATH);
         List<String> lines = new ArrayList<>();
         boolean found = false;
@@ -231,7 +231,7 @@ public class CSVUpdater {
             try {
                 int currentOrderID = Integer.parseInt(values[0].trim());
                 if (currentOrderID == orderID) {
-                    values[7] = "2"; // 将 status 设置为 2 (订单取消)
+                    values[7] = String.valueOf(newStatus); // 将 status 设置为 newStatus
                     lines.set(i, String.join(",", values));
                     found = true;
                     break; // 找到后即可退出循环

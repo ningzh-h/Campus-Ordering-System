@@ -42,7 +42,28 @@ public class OrderService {
         dish.setPopularity(dish.getPopularity() - order.getQuantity());
         dish.setStock(dish.getStock() + order.getQuantity());
         CSVUpdater.update(dish);
-        CSVUpdater.updateOrderStatus(order.getOrderID());
+        CSVUpdater.updateOrderStatus(order.getOrderID(), 2); // 将订单状态更新为已取消
         System.out.println("订单已取消！");
+    }
+
+    public static List<Order> getCurrentOrders(List<Order> orders) {
+        //根据订单状态筛选出当前订单，status为1表示下单成功，但商家还未完成
+        return orders.stream()
+                .filter(order -> order.getStatus() == 1)
+                .toList();
+    }
+
+    public static List<Order> getHistoryOrders(List<Order> orders) {
+        //根据订单状态筛选出历史订单，包括取消和完成的
+        return orders.stream()
+                .filter(order -> order.getStatus() != 1)
+                .toList();
+    }
+
+    public static void finishOrder(Order order) {
+        // 将订单状态更新为已完成
+        CSVUpdater.updateOrderStatus(order.getOrderID(), 3);
+        System.out.println("订单已完成！");
+        Input.jump("按回车键返回");
     }
 }

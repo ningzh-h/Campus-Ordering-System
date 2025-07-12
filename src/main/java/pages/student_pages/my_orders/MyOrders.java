@@ -22,15 +22,12 @@ public class MyOrders {
 
             int len = studentOrders.size();
             for (int i = 0; i < len; i++) {
-
                 try {
                     System.out.println((i + 1) + ". " + studentOrders.get(i).toString());
-                    System.out.println("------------------------------");
                 } catch (NullPointerException e) {
                     System.out.println("订单 " + (i + 1) + " 已经被删除或不存在");
+                } finally {
                     System.out.println("------------------------------");
-                    // 这里用continue来跳过那些菜品已经被商家删除的历史订单，经测试，按原逻辑异常订单之后的正常订单无法展示
-                    continue;
                 }
             }
 
