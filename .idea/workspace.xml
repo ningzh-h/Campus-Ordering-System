@@ -5,25 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/DeleteDish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/DishInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/DisplayDishes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/EditDishInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/NewDish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/DishService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sys/dishes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/dishes.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/DishesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/DishesManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/MerchantPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/MerchantPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/merchant_info/MerchantInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/merchant_info/MerchantInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/student_pages/my_orders/MyOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/student_pages/my_orders/MyOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sys/orders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/orders.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sys/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/users.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/CSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/CSVUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/CSVUpdater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/CSVWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Input.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,29 +52,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Python.data_analyzer.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Learning/CS/java/math_practice/Campus-Ordering-System1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.toDoOptions",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.Main.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.data_analyzer.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Learning/CS/java/math_practice/Campus-Ordering-System1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.toDoOptions&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.Main.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Learning\CS\java\math_practice\Campus-Ordering-System1" />
@@ -98,15 +85,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,6 +116,15 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
       <method v="2" />
     </configuration>
   </component>
