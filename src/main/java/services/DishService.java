@@ -21,6 +21,6 @@ public class DishService {
 
         CSVWriter.write(dish);
         System.out.println("新增菜品成功！");
-        Input.jump("按回车键提交订单");
+        Input.jump("按回车键提交");
     }
 }

@@ -4,26 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/DeleteDish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/DishInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/DisplayDishes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/EditDishInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/NewDish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/services/DishService.java" afterDir="false" />
+    <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="1.完善功能：取消订单后恢复菜品的stock和popularity&#10;2.修复了[我的订单]中历史订单菜品被删除后打印异常的bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sys/dishes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/dishes.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/DishesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/dishes_manager/DishesManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/MerchantPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/MerchantPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/merchant_info/MerchantInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/merchant_info/MerchantInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sys/orders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/orders.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/OrdersManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/OrdersManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/student_pages/my_orders/MyOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/student_pages/my_orders/MyOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/LoginService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/CSVReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/CSVUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/CSVUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/CSVWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Input.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +75,7 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.toDoOptions",
     "vue.rearranger.settings.migration": "true",
-    "应用程序.Main.executor": "Run"
+    "应用程序.Main.executor": "Debug"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -98,15 +88,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -140,6 +121,33 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <method v="2" />
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.Main" />
+      <module name="CampusOrderingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -167,7 +175,39 @@
       <option name="project" value="LOCAL" />
       <updated>1752208817428</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1.修复了readOrdersByUserID方法中日期时间解析错误的问题&#10;2.优化了write(User user)方法的写入格式，之前的逗号显示不符合首行的格式">
+      <option name="closed" value="true" />
+      <created>1752295919721</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752295919721</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1.新增取消订单功能">
+      <option name="closed" value="true" />
+      <created>1752300439587</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752300439587</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1.完善功能：下单后更新dishes.csv中的库存，且下单数量大于当前库存时会下单失败">
+      <option name="closed" value="true" />
+      <created>1752303086641</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752303086641</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1.完善功能：取消订单后恢复菜品的stock和popularity&#10;2.修复了[我的订单]中历史订单菜品被删除后打印异常的bug">
+      <option name="closed" value="true" />
+      <created>1752306198570</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752306198570</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +227,34 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新自述文件，添加了 Python 数据分析" />
     <MESSAGE value="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="1.修复了readOrdersByUserID方法中日期时间解析错误的问题&#10;2.优化了write(User user)方法的写入格式，之前的逗号显示不符合首行的格式" />
+    <MESSAGE value="1.新增取消订单功能" />
+    <MESSAGE value="1.完善功能：下单后更新dishes.csv中的库存，且下单数量大于当前库存时会下单失败" />
+    <MESSAGE value="1.完善功能：取消订单后恢复菜品的stock和popularity&#10;2.修复了[我的订单]中历史订单菜品被删除后打印异常的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.完善功能：取消订单后恢复菜品的stock和popularity&#10;2.修复了[我的订单]中历史订单菜品被删除后打印异常的bug" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/merchant_pages/OrdersManager.java</url>
+          <line>16</line>
+          <properties class="main.java.pages.merchant_pages.OrdersManager" method="ordersManager">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/services/OrderService.java</url>
+          <line>62</line>
+          <properties class="main.java.services.OrderService" method="finishOrder">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

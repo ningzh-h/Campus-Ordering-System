@@ -44,10 +44,12 @@ public class NewOrder {
                             dish.getPrice() * quantity,
                             1
                         );
-                        orderService.createOrder(order);
-                        System.out.println("已为您生成订单！");
-                        System.out.println("订单信息：");
-                        System.out.println(order);
+                        boolean orderSuccess = orderService.createOrder(order);
+                        if (orderSuccess) {
+                            System.out.println("已为您生成订单！");
+                            System.out.println("订单信息：");
+                            System.out.println(order);
+                        }
                         return;
                     }
                 } else {

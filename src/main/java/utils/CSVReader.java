@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.format.DateTimeFormatter;
 
 /**
  * CSVReader类用于从CSV文件中读取数据
@@ -305,7 +306,7 @@ public class CSVReader {
                 }
                 String[] values = line.split(",");
                 try {
-                    // 检查商家ID是否匹配 (列索引 3)
+                    // 检查用户ID是否匹配 (列索引 3)
                     int csvUserID = Integer.parseInt(values[role + 1].trim());
                     if (csvUserID == userID) {
                         int orderID = Integer.parseInt(values[0].trim());
@@ -317,17 +318,19 @@ public class CSVReader {
                         Dish dish = readDishesByDishName(dishName);
                         int quantity = Integer.parseInt(values[4].trim());
                         double totalPrice = Double.parseDouble(values[5].trim());
-                        // TODO: 时间解析失败
-//                        LocalDateTime orderTime = LocalDateTime.parse(values[6].trim());
+
+                        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                        LocalDateTime orderTime = LocalDateTime.parse(values[6].trim(), formatter);
+
                         int status = Integer.parseInt(values[7].trim());
                         orderList.add(new Order(orderID, student, merchant, dish, quantity, orderTime, totalPrice, status));
                     }
                 } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-                    System.err.println("解析菜品数据时出错，行内容: " + line);
+                    System.err.println("解析订单数据时出错，行内容: " + line);
                 }
             }
         } catch (IOException e) {
-            System.err.println("读取 dishes.csv 文件时出错: " + e.getMessage());
+            System.err.println("读取 orders.csv 文件时出错: " + e.getMessage());
         }
         return orderList;
     }

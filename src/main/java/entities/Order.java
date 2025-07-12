@@ -16,7 +16,7 @@ public class Order {
     private int quantity;
     private LocalDateTime orderTime;
     private double totalPrice;
-    private int status;                 // 订单状态 (0：待下单，1：下单成功，2：订单取消)
+    private int status;                 // 订单状态 (1：下单成功，2：订单取消，3：订单完成)
 
     public Order(Student student, Merchant merchant, Dish dish, int quantity, LocalDateTime orderTime, double totalPrice, int status) {
         this.student = student;
@@ -96,9 +96,11 @@ public class Order {
     public String toString() {
         String statusStr;
         if (status == 1) {
-            statusStr = "下单成功";
+            statusStr = "下单成功，待商家完成";
+        } else if (status == 2) {
+            statusStr = "订单已取消";
         } else {
-            statusStr = "订单取消";
+            statusStr = "订单已完成";
         }
 
         return  "订单号：" + orderID +
@@ -106,7 +108,7 @@ public class Order {
                 "\n接单商家：" + merchant.getUsername() +
                 "\n餐品：" + dish.getDishName() +
                 "\n数量：" + quantity +
-                "\n总金额：" + totalPrice +
+                "\n总金额：" + totalPrice + "元" +
                 "\n顾客手机：" + student.getPhone() +
                 "\n下单时间：" + orderTime.format(ofPattern("yyyy-MM-dd HH:mm:ss")) +
                 "\n送达地址：" + student.getAddress() +

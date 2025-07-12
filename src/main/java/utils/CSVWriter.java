@@ -26,19 +26,18 @@ public class CSVWriter {
     public static void write(User user) {
         // 使用 true 参数来开启追加模式
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(USERS_CSV_PATH, true))) {
-            StringBuilder sb = new StringBuilder();
             String userStr =
                 user.getUserID() + "," +
                 user.getUsername() + "," +
                 user.getPassword() + "," +
                 user.getPhone() + "," +
                 user.getAddress() + "," +
-                user.getRole();
+                user.getRole() + ",";
 
             if (user instanceof Student student) {
                 userStr += student.getStudentID() + ",,";
             } else if (user instanceof Merchant merchant) {
-                userStr += ",," + merchant.getCanteen() + merchant.getLocation();
+                userStr += "," + merchant.getCanteen() + "," + merchant.getLocation();
             }
             bw.write(userStr);
             bw.newLine();
