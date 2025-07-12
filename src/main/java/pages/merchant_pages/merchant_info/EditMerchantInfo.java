@@ -1,8 +1,8 @@
 package main.java.pages.merchant_pages.merchant_info;
 
 import main.java.entities.users.Merchant;
-import main.java.utils.CSVReader;
-import main.java.utils.CSVUpdater;
+import main.java.utils.ForCSV.CSVReader;
+import main.java.utils.ForCSV.CSVUpdater;
 import main.java.utils.Input;
 
 public class EditMerchantInfo {

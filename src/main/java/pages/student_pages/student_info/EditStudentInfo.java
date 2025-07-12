@@ -1,8 +1,8 @@
 package main.java.pages.student_pages.student_info;
 
 import main.java.entities.users.Student;
-import main.java.utils.CSVReader;
-import main.java.utils.CSVUpdater;
+import main.java.utils.ForCSV.CSVReader;
+import main.java.utils.ForCSV.CSVUpdater;
 import main.java.utils.Input;
 
 public class EditStudentInfo {

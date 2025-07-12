@@ -1,8 +1,8 @@
 package main.java.services;
 
 import main.java.entities.users.User;
-import main.java.utils.CSVWriter;
-import main.java.utils.CSVReader;
+import main.java.utils.ForCSV.CSVWriter;
+import main.java.utils.ForCSV.CSVReader;
 
 import java.util.List;
 

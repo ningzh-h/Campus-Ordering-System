@@ -6,6 +6,8 @@ import main.java.pages.merchant_pages.dishes_manager.DishesManager;
 import main.java.pages.merchant_pages.merchant_info.MerchantInfo;
 import main.java.utils.Input;
 
+import java.io.IOException;
+
 public class MerchantPage {
     Merchant currentUser;
     DishesManager dishesManager = new DishesManager();
@@ -14,7 +16,7 @@ public class MerchantPage {
     MerchantInfo merchantInfo = new MerchantInfo();
 
     // 商家页面
-    public User showMerchantMenu(User currentUser) {
+    public User showMerchantMenu(User currentUser) throws IOException {
         this.currentUser = (Merchant) currentUser;
 
         System.out.println("=== 商家管理系统 ===");

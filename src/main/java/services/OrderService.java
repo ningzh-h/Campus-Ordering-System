@@ -2,9 +2,9 @@ package main.java.services;
 
 import main.java.entities.Dish;
 import main.java.entities.Order;
-import main.java.utils.CSVReader;
-import main.java.utils.CSVUpdater;
-import main.java.utils.CSVWriter;
+import main.java.utils.ForCSV.CSVReader;
+import main.java.utils.ForCSV.CSVUpdater;
+import main.java.utils.ForCSV.CSVWriter;
 import main.java.utils.Input;
 
 import java.util.List;

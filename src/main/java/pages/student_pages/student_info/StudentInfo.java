@@ -15,7 +15,7 @@ public class StudentInfo {
         System.out.println("5. 地址：" + currentUser.getAddress());
         System.out.println("6. 学号：" + currentUser.getStudentID());
         System.out.println("0. 返回订餐系统");
-        int choice = Input.getInt("请选择");
+        int choice = Input.getInt("请选择：");
         
         editStudentInfo.editInfo(currentUser, choice);
     }

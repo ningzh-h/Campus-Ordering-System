@@ -2,7 +2,7 @@ package main.java.pages.student_pages.new_order;
 
 import main.java.entities.Dish;
 import main.java.entities.users.Merchant;
-import main.java.utils.CSVReader;
+import main.java.utils.ForCSV.CSVReader;
 import main.java.utils.Input;
 
 import java.util.List;

@@ -71,13 +71,8 @@ public class OrdersManager {
                     } catch (Exception e) {
                         System.out.println("暂无数据");
                     }
-                    int orderChoice = Input.getInt("按任意键返回");
-                    if (orderChoice != 0) {
-                        System.out.println("按任意键返回");
-                        scanner.nextLine();
-                    } else {
-                        break;
-                    }
+                    Input.jump("按回车键返回");
+                    break;
                 }
                 break;
 

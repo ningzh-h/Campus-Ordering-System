@@ -5,6 +5,8 @@ import main.java.pages.login_pages.LoginPage;
 import main.java.pages.merchant_pages.MerchantPage;
 import main.java.pages.student_pages.StudentPage;
 
+import java.io.IOException;
+
 
 public class Main {
     private static final LoginPage loginPage = new LoginPage();
@@ -12,7 +14,7 @@ public class Main {
     private static final MerchantPage merchantPage = new MerchantPage();
     private static User currentUser = null;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println("欢迎使用校园餐厅订餐系统！");
 
         // 流程控制

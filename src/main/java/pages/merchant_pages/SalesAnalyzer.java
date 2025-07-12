@@ -1,10 +1,19 @@
 package main.java.pages.merchant_pages;
 
 import main.java.entities.users.User;
+import main.java.services.UserService;
+
+import java.io.IOException;
 
 public class SalesAnalyzer {
-    // TODO: 目前想象不到销售额分析要展示什么界面, 之后再看看, 大概是放几张图？Java 终端上可以读图吗？
-    public void salesAnalyzer(User currentUser) {
+    static UserService userService = new UserService();
 
+    public static void salesAnalyzer(User currentUser) throws IOException {
+        try {
+            userService.merchantSalesAnalyze(currentUser);
+            System.out.println("已存储商家数据分析可视化结果到 resources/python/for_merchants/img 中");
+        } catch (IOException e) {
+            System.err.println("商家数据分析失败！");
+        }
     }
 }

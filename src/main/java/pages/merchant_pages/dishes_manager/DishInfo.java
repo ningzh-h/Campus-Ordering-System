@@ -2,7 +2,7 @@ package main.java.pages.merchant_pages.dishes_manager;
 
 import main.java.entities.Dish;
 import main.java.entities.users.Merchant;
-import main.java.utils.CSVReader;
+import main.java.utils.ForCSV.CSVReader;
 import main.java.utils.Input;
 
 import java.util.List;

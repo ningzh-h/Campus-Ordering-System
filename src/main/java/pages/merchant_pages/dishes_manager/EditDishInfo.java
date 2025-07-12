@@ -1,7 +1,7 @@
 package main.java.pages.merchant_pages.dishes_manager;
 
 import main.java.entities.Dish;
-import main.java.utils.CSVUpdater;
+import main.java.utils.ForCSV.CSVUpdater;
 import main.java.utils.Input;
 
 public class EditDishInfo {

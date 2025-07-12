@@ -1,4 +1,4 @@
-package main.java.utils;
+package main.java.utils.ForCSV;
 
 import main.java.entities.Dish;
 import main.java.entities.Order;
@@ -21,6 +21,7 @@ public class CSVReader {
 
     private static final String USERS_CSV_PATH = "resources/sys/users.csv";
     private static final String DISHES_CSV_PATH = "resources/sys/dishes.csv";
+    private static final String DISHES_TOP_10_PATH = "resources/python/csv/for_students/dishes_top_10.csv";
     private static final String ORDERS_CSV_PATH = "resources/sys/orders.csv";
 
     /**
@@ -333,5 +334,35 @@ public class CSVReader {
             System.err.println("读取 orders.csv 文件时出错: " + e.getMessage());
         }
         return orderList;
+    }
+
+    public static List<Dish> readTOP10Dishes() {
+        List<Dish> dishList = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(DISHES_TOP_10_PATH))) {
+            String line;
+            br.readLine();
+            while ((line = br.readLine()) != null) {
+                // 跳过空行或注释/标题行
+                if (line.trim().isEmpty()) {
+                    continue;
+                }
+                String[] values = line.split(",");
+                try {
+                    // 解析 csv 文件
+                    int dishID = Integer.parseInt(values[0].trim());
+                    String dishName = values[1].trim();
+                    double price = Double.parseDouble(values[2].trim());
+                    int merchantID = Integer.parseInt(values[3].trim());
+                    int stock = Integer.parseInt(values[4].trim());
+                    int popularity = Integer.parseInt(values[5].trim());
+                    dishList.add(new Dish(dishID, dishName, price, merchantID, stock, popularity));
+                } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+                    System.err.println("解析菜品数据时出错，行内容: " + line);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("读取 dishes_top_10.csv 文件时出错: " + e.getMessage());
+        }
+        return dishList;
     }
 }

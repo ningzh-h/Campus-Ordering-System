@@ -14,7 +14,7 @@ public class MerchantInfo {
         System.out.println("4. 电话：" + currentUser.getPhone());
         System.out.println("5. 地址：" + currentUser.getAddress());
         System.out.println("0. 返回订餐系统");
-        int choice = Input.getInt("请选择");
+        int choice = Input.getInt("请选择：");
 
         editMerchantInfo.editInfo(currentUser, choice);
     }
