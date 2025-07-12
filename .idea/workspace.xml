@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能">
+    <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="1.完成功能：商家页面-订单处理，可处理当前待完成的订单和查看历史订单（包括取消的和完成的）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sys/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/merchant_info/EditMerchantInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/merchant_info/EditMerchantInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/student_pages/student_info/EditStudentInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/student_pages/student_info/EditStudentInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +32,12 @@
     &quot;assignee&quot;: &quot;ningzh-h&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:ningzh-h/Campus-Ordering-System.git",
-    "accountId": "e7c46313-4246-4ed5-922c-43c354c39f6a"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:/Elliot-04/Campus-Ordering-System.git&quot;,
+    &quot;accountId&quot;: &quot;f5a30c6d-5a56-4f98-b824-bd4b57fb8c5a&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
@@ -80,6 +83,19 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.Main" />
+      <module name="CampusOrderingSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,6 +138,19 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26574.91" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26574.91" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -141,7 +170,47 @@
       <option name="project" value="LOCAL" />
       <updated>1752208817428</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1.修复了readOrdersByUserID方法中日期时间解析错误的问题&#10;2.优化了write(User user)方法的写入格式，之前的逗号显示不符合首行的格式">
+      <option name="closed" value="true" />
+      <created>1752295919721</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752295919721</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1.新增取消订单功能">
+      <option name="closed" value="true" />
+      <created>1752300439587</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752300439587</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1.完善功能：下单后更新dishes.csv中的库存，且下单数量大于当前库存时会下单失败">
+      <option name="closed" value="true" />
+      <created>1752303086641</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752303086641</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1.完善功能：取消订单后恢复菜品的stock和popularity&#10;2.修复了[我的订单]中历史订单菜品被删除后打印异常的bug">
+      <option name="closed" value="true" />
+      <created>1752306198570</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752306198570</updated>
+    </task>
+    <task id="LOCAL-00006" summary="1.完成功能：商家页面-订单处理，可处理当前待完成的订单和查看历史订单（包括取消的和完成的）">
+      <option name="closed" value="true" />
+      <created>1752310427297</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752310427297</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +230,35 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新自述文件，添加了 Python 数据分析" />
     <MESSAGE value="1.utils包新增csv文件读写类&#10;2.实现基于读写users.csv文件的注册和登录功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="1.修复了readOrdersByUserID方法中日期时间解析错误的问题&#10;2.优化了write(User user)方法的写入格式，之前的逗号显示不符合首行的格式" />
+    <MESSAGE value="1.新增取消订单功能" />
+    <MESSAGE value="1.完善功能：下单后更新dishes.csv中的库存，且下单数量大于当前库存时会下单失败" />
+    <MESSAGE value="1.完善功能：取消订单后恢复菜品的stock和popularity&#10;2.修复了[我的订单]中历史订单菜品被删除后打印异常的bug" />
+    <MESSAGE value="1.完成功能：商家页面-订单处理，可处理当前待完成的订单和查看历史订单（包括取消的和完成的）" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.完成功能：商家页面-订单处理，可处理当前待完成的订单和查看历史订单（包括取消的和完成的）" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/pages/merchant_pages/OrdersManager.java</url>
+          <line>16</line>
+          <properties class="main.java.pages.merchant_pages.OrdersManager" method="ordersManager">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/services/OrderService.java</url>
+          <line>62</line>
+          <properties class="main.java.services.OrderService" method="finishOrder">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
