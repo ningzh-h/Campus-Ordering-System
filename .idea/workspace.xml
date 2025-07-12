@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="1.完善功能：取消订单后恢复菜品的stock和popularity&#10;2.修复了[我的订单]中历史订单菜品被删除后打印异常的bug">
+    <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="1.完成功能：商家页面-订单处理，可处理当前待完成的订单和查看历史订单（包括取消的和完成的）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sys/dishes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/dishes.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sys/orders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/orders.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/OrdersManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/OrdersManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/student_pages/my_orders/MyOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/student_pages/my_orders/MyOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/CSVUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/CSVUpdater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sys/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/merchant_info/EditMerchantInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/merchant_info/EditMerchantInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/student_pages/student_info/EditStudentInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/student_pages/student_info/EditStudentInfo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +70,7 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.toDoOptions",
     "vue.rearranger.settings.migration": "true",
-    "应用程序.Main.executor": "Debug"
+    "应用程序.Main.executor": "Run"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -207,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752306198570</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1.完成功能：商家页面-订单处理，可处理当前待完成的订单和查看历史订单（包括取消的和完成的）">
+      <option name="closed" value="true" />
+      <created>1752310427297</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752310427297</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +234,8 @@
     <MESSAGE value="1.新增取消订单功能" />
     <MESSAGE value="1.完善功能：下单后更新dishes.csv中的库存，且下单数量大于当前库存时会下单失败" />
     <MESSAGE value="1.完善功能：取消订单后恢复菜品的stock和popularity&#10;2.修复了[我的订单]中历史订单菜品被删除后打印异常的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.完善功能：取消订单后恢复菜品的stock和popularity&#10;2.修复了[我的订单]中历史订单菜品被删除后打印异常的bug" />
+    <MESSAGE value="1.完成功能：商家页面-订单处理，可处理当前待完成的订单和查看历史订单（包括取消的和完成的）" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.完成功能：商家页面-订单处理，可处理当前待完成的订单和查看历史订单（包括取消的和完成的）" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,7 @@
 package main.java.pages.student_pages.student_info;
 
 import main.java.entities.users.Student;
+import main.java.utils.CSVReader;
 import main.java.utils.CSVUpdater;
 import main.java.utils.Input;
 
@@ -19,7 +20,14 @@ public class EditStudentInfo {
                 editChoice = Input.getInt("请选择：");
                 switch (editChoice) {
                     case 0 -> {}
-                    case 1 -> currentUser.setUsername(Input.getString("请输入新的用户名："));
+                    case 1 -> {
+                        String newUsername = Input.getString("请输入新的用户名：");
+                        if (CSVReader.readUserNames().contains(newUsername)) {
+                            System.out.println("新用户名与原用户名相同或新用户名已存在！");
+                            break;
+                        }
+                        currentUser.setUsername(newUsername);
+                    }
                     default -> System.out.println("无效选择");
                 }
                 break;
@@ -62,6 +70,10 @@ public class EditStudentInfo {
 
             case 3:
                 String oldPassword = Input.getString("请输入原本的密码：");
+                if (!oldPassword.equals(currentUser.getPassword())) {
+                    System.out.println("原密码错误！");
+                    break;
+                }
                 String newPassword = Input.getString("请输入新的密码：");
                 if (oldPassword.equals(newPassword)) {
                     System.out.println("原密码与新密码相同！");
