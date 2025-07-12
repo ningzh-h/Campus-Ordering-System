@@ -16,7 +16,7 @@ public class Order {
     private int quantity;
     private LocalDateTime orderTime;
     private double totalPrice;
-    private int status;                 // 订单状态 (0：待下单，1：下单成功，2：订单取消)
+    private int status;                 // 订单状态 (1：下单成功，2：订单取消)
 
     public Order(Student student, Merchant merchant, Dish dish, int quantity, LocalDateTime orderTime, double totalPrice, int status) {
         this.student = student;

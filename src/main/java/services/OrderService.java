@@ -27,4 +27,9 @@ public class OrderService {
         CSVUpdater.update(dish);
         Input.jump("按回车键提交订单");
     }
+
+    public void cancelOrder(Order order) {
+        CSVUpdater.updateOrderStatus(order.getOrderID());
+        System.out.println("订单已取消！");
+    }
 }

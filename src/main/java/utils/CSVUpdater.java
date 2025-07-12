@@ -6,6 +6,7 @@ import main.java.entities.users.Student;
 import main.java.entities.users.User;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -200,4 +201,59 @@ public class CSVUpdater {
             }
         }
     }
+
+    /**
+     * 根据订单ID更新订单状态，将状态设置为 2 (取消)
+     */
+    public static void updateOrderStatus(int orderID) {
+        File orderFile = new File(ORDERS_CSV_PATH);
+        List<String> lines = new ArrayList<>();
+        boolean found = false;
+
+        // 1. 将整个文件读入内存
+        try (BufferedReader br = new BufferedReader(new FileReader(orderFile))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                lines.add(line);
+            }
+        } catch (IOException e) {
+            System.err.println("读取 orders.csv 文件时出错: " + e.getMessage());
+            return;
+        }
+
+        // 2. 在内存中查找并修改行
+        for (int i = 1; i < lines.size(); i++) { // 从 1 开始跳过标题行
+            String line = lines.get(i);
+            if (line.trim().isEmpty()) {
+                continue;
+            }
+            String[] values = line.split(",");
+            try {
+                int currentOrderID = Integer.parseInt(values[0].trim());
+                if (currentOrderID == orderID) {
+                    values[7] = "2"; // 将 status 设置为 2 (订单取消)
+                    lines.set(i, String.join(",", values));
+                    found = true;
+                    break; // 找到后即可退出循环
+                }
+            } catch (NumberFormatException e) {
+                System.err.println("解析订单ID时出错，跳过无效行: " + line);
+            }
+        }
+
+        // 3. 如果找到，则将修改后的内容写回原文件
+        if (found) {
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter(orderFile, false))) { // false 表示覆盖文件
+                for (String line : lines) {
+                    bw.write(line);
+                    bw.newLine();
+                }
+            } catch (IOException e) {
+                System.err.println("写回 orders.csv 文件时出错: " + e.getMessage());
+            }
+        } else {
+            System.err.println("未找到订单ID: " + orderID);
+        }
+    }
+
 }
