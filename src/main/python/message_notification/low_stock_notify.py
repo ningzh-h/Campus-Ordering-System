@@ -22,5 +22,4 @@ def low_stock_notify(userID):
 
 
 if __name__ == '__main__': 
-    argv = sys.argv
-    low_stock_notify(argv[1])
+    low_stock_notify(sys.argv[1])

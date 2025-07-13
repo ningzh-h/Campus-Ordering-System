@@ -15,7 +15,7 @@ public class CSVUpdater {
     private static final String DISHES_CSV_PATH = "resources/sys/dishes.csv";
     private static final String ORDERS_CSV_PATH = "resources/sys/orders.csv";
     private static final String TEMP_CSV_PATH = "resources/sys/temp.csv";
-    private static final String USERS_CSV_HEADER = "user_id,user_name,password,phone,address,role,student_id,canteen,location";
+    private static final String USERS_CSV_HEADER = "user_id,username,password,phone,address,role,student_id,canteen,location";
     private static final String DISHES_CSV_HEADER = "dish_id,dish_name,price,merchant_id,stock,popularity";
 
     /**

@@ -9,7 +9,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class ExecPython {
-    public static ScheduledExecutorService scheduler;
+    public static ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
     public static void execPython(String pythonPath) {
         try {
@@ -107,7 +107,6 @@ public class ExecPython {
 
 
     public static void integrateJavaPython(String pythonPath, User user) {
-        scheduler = Executors.newScheduledThreadPool(1);
         scheduler.scheduleAtFixedRate(() -> {
             try {
                 ProcessBuilder pb = new ProcessBuilder("python", pythonPath, String.valueOf(user.getUserID()));
