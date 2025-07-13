@@ -1,8 +1,6 @@
 import pandas as pd
 import random
-import os
 from datetime import datetime
-from twilio.rest import Client
 
 # 修改后的路径获取方式
 USERS_CSV_PATH = r'resources\sys\users.csv'

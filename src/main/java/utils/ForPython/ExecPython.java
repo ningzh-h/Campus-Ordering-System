@@ -122,7 +122,7 @@ public class ExecPython {
             } catch (Exception e) {
                 System.err.println("运行 Python 文件 " + pythonPath + " 失败：" + e.getMessage());
             }
-        }, 0, 10, TimeUnit.SECONDS);
+        }, 10, 10, TimeUnit.SECONDS);
     }
 
 }

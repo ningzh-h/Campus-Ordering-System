@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="1.完成功能：商家页面-订单处理，可处理当前待完成的订单和查看历史订单（包括取消的和完成的）">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sys/dishes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/dishes.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/ForPython/ExecPython.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ForPython/ExecPython.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/message_notification/message_notification.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/message_notification/message_notification.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
