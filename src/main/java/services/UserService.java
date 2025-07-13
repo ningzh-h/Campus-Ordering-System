@@ -20,6 +20,7 @@ public class UserService {
     }
 
     public static void lowStockNotify(Merchant merchant) {
-        ExecPython.integrateJavaPython("src/main/python/message_notification/low_stock_notify.py", merchant);
+        ExecPython execPython = new ExecPython();
+        execPython.integrateJavaPython("src/main/python/message_notification/low_stock_notify.py", merchant);
     }
 }

@@ -61,7 +61,7 @@ def analyze_sales_data(merchantID):
         # 保存并显示图表
         output_path = OUTPUT_IMG_PATH + f'\\sales_analysis_merchant{merchantID}.png'
         plt.savefig(output_path)
-        print(f"\n分析图表已保存至: {output_path}")
+        print(f"\n分析图表已保存至: {output_path}\n")
         # plt.show()
 
     except Exception as e:

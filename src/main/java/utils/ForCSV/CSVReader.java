@@ -21,7 +21,7 @@ public class CSVReader {
 
     private static final String USERS_CSV_PATH = "resources/sys/users.csv";
     private static final String DISHES_CSV_PATH = "resources/sys/dishes.csv";
-    private static final String DISHES_TOP_10_PATH = "resources/python/csv/for_students/dishes_top_10.csv";
+    private static final String DISHES_TOP_10_PATH = "resources/python/csv/dishes_top_10.csv";
     private static final String ORDERS_CSV_PATH = "resources/sys/orders.csv";
 
     /**

@@ -9,7 +9,10 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class ExecPython {
-    public static ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+    public static ScheduledExecutorService scheduler;
+    public ExecPython() {
+        scheduler = Executors.newScheduledThreadPool(1);
+    }
 
 
     public static void execPython(String pythonPath) {
@@ -108,7 +111,7 @@ public class ExecPython {
     }
 
 
-    public static void integrateJavaPython(String pythonPath, User user) {
+    public void integrateJavaPython(String pythonPath, User user) {
         scheduler.scheduleAtFixedRate(() -> {
             try {
                 ProcessBuilder pb = new ProcessBuilder("python", pythonPath, String.valueOf(user.getUserID()));
@@ -123,7 +126,7 @@ public class ExecPython {
             } catch (Exception e) {
                 System.err.println("运行 Python 文件 " + pythonPath + " 失败：" + e.getMessage());
             }
-        }, 10, 10, TimeUnit.SECONDS);
+        }, 5, 60, TimeUnit.SECONDS);
     }
 
 }

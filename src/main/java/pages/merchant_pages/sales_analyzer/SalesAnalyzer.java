@@ -11,7 +11,6 @@ public class SalesAnalyzer {
     public void salesAnalyzer(User currentUser) {
         try {
             userService.merchantSalesAnalyze(currentUser);
-            System.out.println("已存储商家数据分析可视化结果到 resources/python/for_merchants/img 中");
         } catch (IOException e) {
             System.err.println("商家数据分析失败！");
         }

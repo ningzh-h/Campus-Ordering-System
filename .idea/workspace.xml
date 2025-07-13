@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c220a8f-d278-4cce-885b-071955b3a1e0" name="更改" comment="1.完成功能：商家页面-订单处理，可处理当前待完成的订单和查看历史订单（包括取消的和完成的）">
-      <change afterPath="$PROJECT_DIR$/src/main/python/requirement.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/python/csv/for_students/dishes_top_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/csv/dishes_top_10.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/python/img/for_merchants/sales_analysis_merchant2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/img/sales_analysis_merchant2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/MerchantPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/MerchantPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/OrdersManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/orders_manager/OrdersManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/SalesAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/sales_analyzer/SalesAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/csv/dishes_top_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/csv/dishes_top_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/python/img/sales_analysis_merchant2.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/python/img/sales_analysis_merchant2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sys/dishes.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/dishes.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sys/orders.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/orders.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sys/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sys/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/sales_analyzer/SalesAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/merchant_pages/sales_analyzer/SalesAnalyzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ForCSV/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ForCSV/CSVReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/ForPython/ExecPython.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ForPython/ExecPython.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/data_analyzer/for_merchants/sales_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/data_analyzer/for_merchants/sales_analyzer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/python/data_analyzer/for_students/popular_dishes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/data_analyzer/for_students/popular_dishes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/python/message_notification/low_stock_notify.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/python/message_notification/low_stock_notify.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +42,12 @@
     &quot;assignee&quot;: &quot;ningzh-h&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:ningzh-h/Campus-Ordering-System.git",
-    "accountId": "e7c46313-4246-4ed5-922c-43c354c39f6a"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ningzh-h/Campus-Ordering-System.git&quot;,
+    &quot;accountId&quot;: &quot;e7c46313-4246-4ed5-922c-43c354c39f6a&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 8
