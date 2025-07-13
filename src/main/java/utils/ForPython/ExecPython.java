@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class ExecPython {
     public static ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
+
     public static void execPython(String pythonPath) {
         try {
             int exitCode = getExitCode(pythonPath);
@@ -41,6 +42,7 @@ public class ExecPython {
 
         return process.waitFor();
     }
+
 
     public static void execPython(String pythonPath, User user) {
         try {

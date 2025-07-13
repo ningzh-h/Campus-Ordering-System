@@ -1,4 +1,4 @@
-package main.java.pages.merchant_pages;
+package main.java.pages.merchant_pages.sales_analyzer;
 
 import main.java.entities.users.User;
 import main.java.services.UserService;

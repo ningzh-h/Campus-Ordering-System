@@ -23,38 +23,49 @@ src/
 │  │  │  │  ├─ LoginPage.java # 登录页面
 │  │  │  │  ├─ Login.java     # 用户登录
 │  │  │  │  └─ Register.java  # 用户注册
-│  │  │  ├─ student_pages
-│  │  │  │  ├─ StudentPage.java   # 学生订餐系统
-│  │  │  │  ├─ new_order          # 新建订单
-│  │  │  │  ├─ my_orders          # 我的订单
-│  │  │  │  ├─ student_hot_dishes # 热销菜品排行
-│  │  │  │  └─ student_info       # 待定
-│  │  │  └─ merchant_pages
+│  │  │  │
+│  │  │  ├─ student_pages/
+│  │  │  │  ├─ StudentPages.java
+│  │  │  │  ├─ new_order/              # 新建订单
+│  │  │  │  ├─ my_orders/              # 我的订单
+│  │  │  │  ├─ student_popular_dishes/ # 热销菜品
+│  │  │  │  └─ student_info/           # 学生信息
+│  │  │  │
+│  │  │  └─ merchant_pages/
 │  │  │     ├─ MerchantPage.java  # 商家管理系统
-│  │  │     ├─ DishesManager.java # 菜品管理
-│  │  │     ├─ OrdersManager.java # 订单处理
-│  │  │     ├─ SalesAnalyzer.java # 销售分析
-│  │  │     └─ MerchantInfo.java  # 待定
+│  │  │     ├─ dishes_manager/    # 菜品管理
+│  │  │     ├─ orders_manager/    # 订单处理
+│  │  │     ├─ sales_analyzer/    # 销售分析
+│  │  │     └─ merchant_info/     # 商家信息
 │  │  │
 │  │  ├─ services/
-│  │  │  ├─ LogInService.java # 登录注册
-│  │  │  ├─ StudentService.java  # 菜品信息
-│  │  │  ├─ MerchantService.java  # 菜品信息
+│  │  │  ├─ LoginService.java # 登录注册
+│  │  │  ├─ UserService.java  # 用户相关
+│  │  │  ├─ DishService.java  # 菜品相关
 │  │  │  └─ OrderService.java # 订单相关
 │  │  │
 │  │  └─ utils/
 │  │     ├─ Input             # 方便读一个整数或字符串
-│  │     ├─ CSVGenerate.java  # 写 CSV
-│  │     └─ CSVReader         # 读 CSV
+│  │     ├─ ForCSV
+│  │     │  ├─ CSVReader.java
+│  │     │  ├─ CSVUpdater.java
+│  │     │  └─ CSVWriter.java
+│  │     └─ ForPython/ExecPython.java
 │  │  
 │  └─ python/
 │     ├─ requirement.txt
-│     ├─ data_analyzer.py
-│     └─
+│     ├─ data_analyzer/
+│     └─ message_notification/
 │  
 ├─ resources/
 │  ├─ sys/  # 系统内部数据
-│  └─ analyze/ # 数据分析输出数据
+│  │  ├─ users.csv
+│  │  ├─ dishes.csv
+│  │  └─ orders.csv
+│  │ 
+│  └─ python/ # 数据分析输出数据
+│     ├─ csv/
+│     └─ img/
 └─ README # 自述文件
 
 ```

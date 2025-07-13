@@ -4,6 +4,8 @@ import main.java.entities.users.Merchant;
 import main.java.entities.users.User;
 import main.java.pages.merchant_pages.dishes_manager.DishesManager;
 import main.java.pages.merchant_pages.merchant_info.MerchantInfo;
+import main.java.pages.merchant_pages.orders_manager.OrdersManager;
+import main.java.pages.merchant_pages.sales_analyzer.SalesAnalyzer;
 import main.java.services.UserService;
 import main.java.utils.ForPython.ExecPython;
 import main.java.utils.Input;

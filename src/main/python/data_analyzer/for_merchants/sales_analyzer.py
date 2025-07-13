@@ -7,7 +7,7 @@ warnings.filterwarnings('ignore')  # 忽略警告信息
 # 获取当前工作目录并设置数据路径
 DISHES_CSV_PATH = r'resources\sys\dishes.csv'
 ORDERS_CSV_PATH = r'resources\sys\orders.csv'
-OUTPUT_IMG_PATH = r'resources\python\img\for_merchants'
+OUTPUT_IMG_PATH = r'resources\python\img'
 
 # 解决中文问题
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体显示中文

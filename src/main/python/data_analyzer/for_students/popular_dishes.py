@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # csv 文件路径
 DISHES_CSV_PATH = r'resources\sys\dishes.csv'
-OUTPUT_CSV_PATH = r'resources\python\csv\for_students\dishes_top_10.csv'
+OUTPUT_CSV_PATH = r'resources\python\csv\dishes_top_10.csv'
 
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体显示中文
 plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
