@@ -5,6 +5,7 @@ import main.java.entities.Order;
 import main.java.utils.ForCSV.CSVReader;
 import main.java.utils.ForCSV.CSVUpdater;
 import main.java.utils.ForCSV.CSVWriter;
+import main.java.utils.ForPython.ExecPython;
 import main.java.utils.Input;
 
 import java.util.List;
@@ -34,6 +35,7 @@ public class OrderService {
         CSVWriter.write(order);
         CSVUpdater.update(dish);
         Input.jump("按回车键提交订单");
+        ExecPython.execPython("src/main/python/message_notification/order_status_message.py", order, 1);
         return true;
     }
 
@@ -44,6 +46,7 @@ public class OrderService {
         CSVUpdater.update(dish);
         CSVUpdater.updateOrderStatus(order.getOrderID(), 2); // 将订单状态更新为已取消
         System.out.println("订单已取消！");
+        ExecPython.execPython("src/main/python/message_notification/order_status_message.py", order, 2);
     }
 
     public static List<Order> getCurrentOrders(List<Order> orders) {
@@ -63,5 +66,6 @@ public class OrderService {
         CSVUpdater.updateOrderStatus(order.getOrderID(), 3);
         System.out.println("订单已完成！");
         Input.jump("按回车键返回");
+        ExecPython.execPython("src/main/python/message_notification/order_status_message.py", order, 3);
     }
 }
