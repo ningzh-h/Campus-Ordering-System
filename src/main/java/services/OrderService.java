@@ -55,9 +55,7 @@ public class OrderService {
 
     public static List<Order> getHistoryOrders(List<Order> orders) {
         //根据订单状态筛选出历史订单，包括取消和完成的
-        return orders.stream()
-                .filter(order -> order.getStatus() != 1)
-                .toList();
+        return orders.stream() .filter(order -> order.getStatus() != 1) .toList();
     }
 
     public static void finishOrder(Order order) {

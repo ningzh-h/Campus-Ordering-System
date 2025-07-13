@@ -4,6 +4,8 @@ import main.java.entities.users.Merchant;
 import main.java.entities.users.User;
 import main.java.pages.merchant_pages.dishes_manager.DishesManager;
 import main.java.pages.merchant_pages.merchant_info.MerchantInfo;
+import main.java.services.UserService;
+import main.java.utils.ForPython.ExecPython;
 import main.java.utils.Input;
 
 import java.io.IOException;
@@ -12,12 +14,13 @@ public class MerchantPage {
     Merchant currentUser;
     DishesManager dishesManager = new DishesManager();
     OrdersManager ordersManager = new OrdersManager();
-    SalesAnalyzer salesAnalyzer = new SalesAnalyzer();
     MerchantInfo merchantInfo = new MerchantInfo();
 
     // 商家页面
     public User showMerchantMenu(User currentUser) throws IOException {
         this.currentUser = (Merchant) currentUser;
+
+        UserService.lowStockNotify(this.currentUser);
 
         System.out.println("=== 商家管理系统 ===");
         System.out.println("1. 菜品管理");
@@ -30,6 +33,7 @@ public class MerchantPage {
         switch (choice) {
             case 0:
                 this.currentUser = null;
+                ExecPython.scheduler.shutdown();
                 break;
             case 1:
                 dishesManager.dishesManager(this.currentUser);
@@ -38,7 +42,7 @@ public class MerchantPage {
                 ordersManager.ordersManager(this.currentUser);
                 break;
             case 3:
-                salesAnalyzer.salesAnalyzer(this.currentUser);
+                SalesAnalyzer.salesAnalyzer(this.currentUser);
                 break;
             case 4:
                 merchantInfo.merchantInfo(this.currentUser);

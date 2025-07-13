@@ -1,8 +1,14 @@
 package main.java.utils.ForPython;
 
+import main.java.entities.users.User;
+
 import java.io.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class ExecPython {
+    public static ScheduledExecutorService scheduler;
 
     public static void execPython(String pythonPath) {
         try {
@@ -21,10 +27,10 @@ public class ExecPython {
 
         Thread errorThread = new Thread(() ->{
             try (BufferedReader br = new BufferedReader(
-                new InputStreamReader(process.getErrorStream()))) {
+                new InputStreamReader(process.getInputStream()))) {
                     String line;
                     while ((line = br.readLine()) != null) {
-                        System.err.println("[Python Error]" + line);
+                        System.out.println(line);
                     }
             } catch (IOException e) {
                 System.err.println("错误流处理失败：" + e.getMessage());
@@ -35,9 +41,9 @@ public class ExecPython {
         return process.waitFor();
     }
 
-    public static void execPython(String pythonPath, int merchantID) throws IOException {
+    public static void execPython(String pythonPath, User user) {
         try {
-            int exitCode = getExitCode(pythonPath, merchantID);
+            int exitCode = getExitCode(pythonPath, user);
             if (exitCode != 0) {
                 System.err.println("Python 文件" + pythonPath + "执行失败，错误码：" + exitCode);
             }
@@ -46,16 +52,16 @@ public class ExecPython {
         }
     }
 
-    private static int getExitCode(String pythonPath, int merchantID) throws IOException, InterruptedException {
-        ProcessBuilder processBuilder = new ProcessBuilder("python", pythonPath, String.valueOf(merchantID));
+    private static int getExitCode(String pythonPath, User user) throws IOException, InterruptedException {
+        ProcessBuilder processBuilder = new ProcessBuilder("python", pythonPath, String.valueOf(user.getUserID()));
         Process process = processBuilder.start();
 
         Thread errorThread = new Thread(() ->{
             try (BufferedReader br = new BufferedReader(
-                    new InputStreamReader(process.getErrorStream()))) {
+                    new InputStreamReader(process.getInputStream()))) {
                 String line;
                 while ((line = br.readLine()) != null) {
-                    System.err.println("[Python Error]" + line);
+                    System.out.println(line);
                 }
             } catch (IOException e) {
                 System.err.println("错误流处理失败：" + e.getMessage());
@@ -64,6 +70,26 @@ public class ExecPython {
         errorThread.start();
 
         return process.waitFor();
+    }
+
+
+    public static void integrateJavaPython(String pythonPath, User user) {
+        scheduler = Executors.newScheduledThreadPool(1);
+        scheduler.scheduleAtFixedRate(() -> {
+            try {
+                ProcessBuilder pb = new ProcessBuilder("python", pythonPath, String.valueOf(user.getUserID()));
+                Process process = pb.start();
+
+                BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
+                String line;
+                while ((line = br.readLine()) != null) {
+                    System.out.println(line);
+                }
+                process.waitFor();
+            } catch (Exception e) {
+                System.err.println("运行 Python 文件 " + pythonPath + " 失败：" + e.getMessage());
+            }
+        }, 0, 10, TimeUnit.SECONDS);
     }
 
 }

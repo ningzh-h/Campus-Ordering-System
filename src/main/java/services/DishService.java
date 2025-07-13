@@ -6,7 +6,6 @@ import main.java.utils.ForCSV.CSVWriter;
 import main.java.utils.ForPython.ExecPython;
 import main.java.utils.Input;
 
-import java.io.IOException;
 import java.util.List;
 
 public class DishService {
@@ -26,7 +25,7 @@ public class DishService {
         Input.jump("按回车键提交");
     }
 
-    public List<Dish> getPopularDishes() throws IOException {
+    public List<Dish> getPopularDishes() {
         ExecPython.execPython("src/main/python/data_analyzer/for_students/popular_dishes.py");
         return CSVReader.readTOP10Dishes();
     }

@@ -2,18 +2,20 @@ import pandas as pd
 import random
 import os
 from datetime import datetime
+from twilio.rest import Client
 
 # 修改后的路径获取方式
-current_dir = os.getcwd()
-data_dir = os.path.join(current_dir, 'data')
+USERS_CSV_PATH = r'resources\sys\users.csv'
+DISHES_CSV_PATH = r'resources\sys\dishes.csv'
+ORDERS_CSV_PATH = r'resources\sys\orders.csv'
 
 class NotificationSystem:
     def __init__(self):
         # 读取数据时确保处理可能的异常
         try:
-            self.users = pd.read_csv(os.path.join(data_dir, 'users.csv'))
-            self.dishes = pd.read_csv(os.path.join(data_dir, 'dishes.csv'))
-            self.orders = pd.read_csv(os.path.join(data_dir, 'orders.csv'))
+            self.users = pd.read_csv(USERS_CSV_PATH)
+            self.dishes = pd.read_csv(DISHES_CSV_PATH)
+            self.orders = pd.read_csv(ORDERS_CSV_PATH)
 
             # 检查数据是否加载成功
             print("数据加载成功！")
