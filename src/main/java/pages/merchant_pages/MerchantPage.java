@@ -14,6 +14,7 @@ public class MerchantPage {
     Merchant currentUser;
     DishesManager dishesManager = new DishesManager();
     OrdersManager ordersManager = new OrdersManager();
+    SalesAnalyzer salesAnalyzer = new SalesAnalyzer();
     MerchantInfo merchantInfo = new MerchantInfo();
 
     // 商家页面
@@ -42,7 +43,7 @@ public class MerchantPage {
                 ordersManager.ordersManager(this.currentUser);
                 break;
             case 3:
-                SalesAnalyzer.salesAnalyzer(this.currentUser);
+                salesAnalyzer.salesAnalyzer(this.currentUser);
                 break;
             case 4:
                 merchantInfo.merchantInfo(this.currentUser);

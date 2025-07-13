@@ -40,7 +40,7 @@ public class StudentPage {
                 myOrders.myOrders(this.currentUser);
                 break;
            case 3:
-                popularDishes.popularDishes(this.currentUser);
+                popularDishes.popularDishes();
                 break;
            case 4:
                 studentInfo.studentInfo(this.currentUser);

@@ -4,7 +4,6 @@ import main.java.entities.users.User;
 import main.java.pages.login_pages.LoginPage;
 import main.java.pages.merchant_pages.MerchantPage;
 import main.java.pages.student_pages.StudentPage;
-import main.java.utils.ForPython.ExecPython;
 
 import java.io.IOException;
 

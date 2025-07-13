@@ -12,7 +12,7 @@ import java.util.List;
 public class StudentPopularDishes {
     DishService dishService = new DishService();
 
-    public void popularDishes(Student currentUser) {
+    public void popularDishes() {
         Merchant merchant;
         System.out.println("=== 热销排行榜 ===");
         try {

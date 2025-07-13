@@ -8,7 +8,7 @@ import java.io.IOException;
 public class SalesAnalyzer {
     static UserService userService = new UserService();
 
-    public static void salesAnalyzer(User currentUser) throws IOException {
+    public void salesAnalyzer(User currentUser) {
         try {
             userService.merchantSalesAnalyze(currentUser);
             System.out.println("已存储商家数据分析可视化结果到 resources/python/for_merchants/img 中");

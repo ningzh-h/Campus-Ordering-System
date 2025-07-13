@@ -7,10 +7,8 @@ import main.java.services.UserService;
 import main.java.utils.Input;
 
 import java.util.List;
-import java.util.Scanner;
 
 public class OrdersManager {
-    Scanner scanner = new Scanner(System.in);
     UserService userService = new UserService();
     List<Order> orders;
 

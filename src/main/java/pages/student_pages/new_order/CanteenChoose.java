@@ -1,6 +1,5 @@
 package main.java.pages.student_pages.new_order;
 
-
 import main.java.utils.Input;
 
 public class CanteenChoose {
