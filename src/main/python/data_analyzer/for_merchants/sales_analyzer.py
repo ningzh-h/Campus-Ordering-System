@@ -1,6 +1,7 @@
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
+from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings('ignore')  # 忽略警告信息
 
@@ -13,11 +14,15 @@ OUTPUT_IMG_PATH = r'resources\python\img'
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体显示中文
 plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
+
 def analyze_sales_data(merchantID):
     try:
         # 读取数据文件
         orders = pd.read_csv(ORDERS_CSV_PATH)
         dishes = pd.read_csv(DISHES_CSV_PATH)
+
+        week_ago = datetime.now() - timedelta(days=7)
+        orders = orders[(pd.to_datetime(orders['order_time']) <= datetime.now()) & (pd.to_datetime(orders['order_time']) >= week_ago)]
 
         # 提取对应商家的数据，且订单不能被取消
         orders = orders[orders['merchant_id'] == int(merchantID)]
@@ -62,7 +67,7 @@ def analyze_sales_data(merchantID):
         output_path = OUTPUT_IMG_PATH + f'\\sales_analysis_merchant{merchantID}.png'
         plt.savefig(output_path)
         print(f"\n分析图表已保存至: {output_path}\n")
-        # plt.show()
+        plt.show()
 
     except Exception as e:
         print(f"数据分析出错: {str(e)}")

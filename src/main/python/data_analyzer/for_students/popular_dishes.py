@@ -14,6 +14,7 @@ def main():
     if len(df_dishes) > 10: 
         df_dishes = df_dishes[:10]
     df_dishes.to_csv(OUTPUT_CSV_PATH, index=False)
+    print(df_dishes)
 
 
 if __name__ == '__main__': 
